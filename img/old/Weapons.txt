@@ -1,0 +1,17 @@
+        Spada di legno
+        Pugnale
+        Spada
+        Spadino (folletti)
+        Alabarda
+        Arco e frecce
+        Frusta e catena
+        Mazza Ferrata
+        Daga corta
+        
+        
+II,236  Corazza
+        Spallacci
+        Elmo
+        Gambali
+        Corpetto nero
+        Pantaloni cuoio

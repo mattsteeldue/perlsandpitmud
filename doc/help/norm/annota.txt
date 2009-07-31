@@ -1,0 +1,6 @@
+Uso: annota [testo]
+Il comando '{B}annota{/B}' consente di lasciare una annotazione nel luogo dove ti trovi mentre esegui l'annotazione. 
+Le annotazioni vengono memorizzate in modo permanente ma sono visibili solo agli utenti che hanno un livello uguale o maggiore di chi ha lasciato l'annotazione.
+Ciascun utente potrà lasciare la sua "traccia" oppure suggerire miglioramenti e segnalare errori.
+Gli amministratori esaminano periodicamente le annotazioni che verranno recepite e rimosse. 
+Ogni abuso verrà perseguito e punito.

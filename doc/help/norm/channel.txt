@@ -1,0 +1,4 @@
+Uso: channel <canale> [ /on | /off | /rev | /color c |testo ]
+Il comando '{B}channel{/B}' consente di comunicare su determinati canali specifici.
+Per esempio con {B}channel rpg /on{/B} ci si collega al canale '{B}rpg{/B}' e da questo momento è possibile inviare e ricevere messaggi. L'invio di un messaggio sul canale avviene semplicemente con {B}channel rpg <messaggio>{/B}. Conviene usare opportuni {B}alias{/B} per usare agevolmente i vari canali. Per esempio definendo un nuovo alias con '{B}alias xyz channel rpg{/B}' è poi possibile dare solo {B}xyz <messaggio>{/B} anziché dare per intero {B}channel rpg <messaggio>{/B}.
+Vedi anche: {B}color{/B}, {B}alias{/B}. 

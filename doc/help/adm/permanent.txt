@@ -1,0 +1,2 @@
+Uso: permanent <object> [numero]
+Rende l'oggetto permanente: alla prossima connessione lo ritroverai nell'inventario.

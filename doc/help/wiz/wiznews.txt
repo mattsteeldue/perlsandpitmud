@@ -1,0 +1,3 @@
+Uso: wiznews
+Mostra la pagina delle "notizie" per gli amministratori. 
+Questa pagina viene mostrata quando ci si collega. Per chi non è riuscito a leggerla in quel momento è sempre possibile rileggerla con questo comando.

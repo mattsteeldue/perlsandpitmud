@@ -1,0 +1,5 @@
+#
+# dummy_clon.txt
+#
+Ab = ([area/dummy/obj/skull])
+

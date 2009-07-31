@@ -1,0 +1,284 @@
+abbastanza
+abile = abilmente
+abilmente
+abitualmente
+accanitamente
+accidentalmente
+accuratamente
+adatto = in modo adatto
+addirittura = addirittura
+adeguatamente
+adeguato = adeguatamente
+adora = con adorazione
+affannosamente
+affermativamente
+affettuosamente
+affettuoso = affettuosamente
+alacremente
+allegramente
+alquanto
+alternatamente
+alternativa = alternativamente
+alternativamente
+alternato = alternatamente
+altrimenti = altrimenti
+amaramente
+ampiamente
+ampio = ampiamente
+annuale = annualmente
+ansia = con ansia
+ansiosamente
+ansioso = ansiosamente
+apertamente
+apologia = per scusarsi
+apparentemente
+appena
+appena = appena
+appositamente
+apposta
+appropriatamente
+appropriato = in modo appropriato
+approssimativamente
+approvazione = in approvazione
+aspramente
+assolutamente
+assoluto = assolutamente
+attentamente
+attento = attentamente
+attivamente
+attivo = attivamente
+attualmente
+automaticamente
+automatico = automaticamente
+avidamente
+avido = avidamente
+basic = sostanzialmente
+beatamente
+brevamente
+calmo
+cane = da cani
+caso = per caso
+casualmente
+cautamente
+certamente
+chiaramente
+ciecamente
+circa = all'incirca
+comodamente
+complessivamente
+completamente
+comunemente
+concordemente
+conforme = in conformita'
+conformemente
+conseguentemente
+contemporaneamente
+continuamente
+contrariamente
+convenientemente
+correntemente
+costantemente
+criticamente
+cupamente
+davvero
+debitamente
+debolmente
+decentemente
+decisamente
+deliberatamente
+deliberato = deliberatamente
+delicatamente
+densamente
+dettagliatamente
+diametralmente
+differentamente
+difficilmente
+direttamente
+disinvoltamente
+disinvolto = con disinvoltura
+disordinatamente
+disperatamente
+distintamente
+distrattamente
+diversamente
+doppiamente
+dovutamente
+drammaticamente
+drasticamente
+eccessivamente
+economicamente
+effettivamente
+efficacemente
+efficientemente
+enormemente
+equamente
+esattamente
+esclusivamente
+espressamente
+essenzialmente
+esternamente
+estremamente
+eventualmente
+evidente = evidentemente
+evidentemente
+facilmente
+falsamente
+fatalmente
+favorevolmente
+fedelmente
+fermamente
+finalmente
+fisicamente
+fittamente
+fondamentale = fondamentalmente
+fondamentalmentamente
+forte
+fortemente
+fortunatamente
+francamente
+fraternamente
+freddamente
+frettolosamente
+generalmente
+gentilmente
+giornalmente
+giustamente
+gradatamente
+immancabilmente
+improvvisamente
+impunemente
+inaspettatamente
+inavvertitamente
+incidentalmente
+incredibile = incredibilmente
+incredibile = incredibilmente
+incredibilmente
+indebitamente
+indistintamente
+individualmente
+indubbiamente
+inesorabilmente
+inevitabilmente
+ingiustamente
+ininterrottamente
+inizialmente
+interamente
+intimamente
+inutilmente
+lateralmente
+letteralmente
+limitatamente
+logicamente
+lontanamente
+lungamente
+macchinalmente
+maggiormente
+magnificamente
+malamente
+malignamente
+manualmente
+materialmente
+meccanicamente
+mediamente
+mensilmente
+mentalmente
+meritatamente
+meschino = in modo meschino
+minacciosamente
+minuziosamente
+momentaneamente
+mortalmente
+naturalmente
+necessariamente
+negativamente
+nettamente
+normalmente
+notevolmente
+nuovamente
+obiettivamente
+onestamente
+opprimentemente
+oralmente
+ottimamente
+parallelamente
+particolarmente
+pazzamente
+perdutamente
+perfettamente
+pericolosamente
+personalmente
+piano
+platealmente
+possibilmente
+praticamente
+precisamente
+preciso = precisamente
+preferibilmente
+prevalentemente
+prevedibilmente
+principalmente
+probabilmente
+profondamente
+profumatamente
+progressivamente
+propriamente
+prossimamente
+prudentemente
+puntualmente
+quotidianamente
+rabbia = con rabbia
+rabbiosamente
+radicalmente
+rapidamente
+raramente
+realmente
+recentemente
+relativamente
+ripetutamente
+rispettivamente
+sbalorditivamente
+sbalorditivo = sbalorditivamente
+scopo = senza scopo
+secondariamente
+semplicemente
+sentimentalmente
+sentitamente
+separatamente
+simultaneamente
+singolarmente
+solamente
+solitamente
+sostanziale = sostanzialmente
+sostanzialmente
+specialmente
+speditamente
+splendidamente
+stranamente
+straordinariamente
+straordinario = straordinariamente
+strettamente
+subito
+successivamente
+sufficiente = sufficientemente
+sufficientemente
+telefonicamente
+terribile = in modo terribile
+terribilmente
+tumultuosamente
+ugualmente
+ultimamente
+umanamente
+unicamente
+uniformemente
+universalmente
+usualmente
+utilmente
+vagamente
+veramente
+vero = veramente
+vicino
+vigliaccamente
+vigorosamente
+vilmente
+vivamente
+volgarmente

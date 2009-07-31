@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+  
+  <title>Salazar</title>
+</head>
+
+
+<body>
+<h3 class="goog-ws-page-title" id="goog-ws-page-title-header" xmlns="http://www.w3.org/1999/xhtml"><span id="goog-ws-page-title">Benvenuto</span></h3>
+Nel giugno del 2002, ho iniziato ad 
+usare Perl. In precedenza ho usato con profitto C e C++ perci&ograve; non ho avuto 
+difficolt&agrave; ad entrare nella filosofia del linguaggio. Dopo poco pi&ugrave; di un anno, 
+ero ormai positivamente impressionato dalla potenza di Perl e dalla ricchezza di 
+librerie disponibili. <br>
+<br>
+Ad ottobre 2003 ho iniziato a pensare 
+concretamente alla possibilit&agrave; di utilizzare il linguaggio Perl per sviluppare 
+un <b><a href="http://it.wikipedia.org/wiki/Multi_user_dungeon" target="_blank" rel="nofollow">MUD</a></b>, nel tempo libero ovviamente. L'obiettivo fondamentale 
+era di utilizzare Perl sia per sviluppare la parte "driver" (detta anche 
+"engine"), sia la parte delle "librerie", facendo tesoro dell'esperienza 
+maturata durante gli anni novanta utilizzando LPC quando bazzicavo nei MUD 
+dell'epoca.<br>
+<br>
+Nel giro di un pochi giorni ho costruito un piccolo "driver" 
+(che ho battezzato Muddrv) che accettava semplici connessioni telnet. Una volta 
+stabilita la connessione fu possibile definire un nuovo utente e consentirgli di 
+muoversi all'interno di un piccolo mondo virtuale formato da un paio 
+stanze.<br>
+<br>
+In pochi mesi ho compreso che era necessario strutturare con 
+molta attenzione il software, impiegando una metodologia "Object Oriented" (che 
+va tanto di moda oggi) e suddividendolo in un certo numero di Oggetti-Package 
+per&nbsp; formare una gerarchia consistente; il tutto avrebbe fatto affidamento su un 
+insieme di funzioni di base, una "libreria" denominata 
+MudCore.<br>
+<br>
+L'esigenza di salvare su disco la "foto istantanea" di un dato 
+oggetto in modo da poterlo successivamente rileggere e ricostruire identico a 
+prima mi ha costretto a sviluppare una modalit&agrave; di scrittura e lettura di tutte 
+le componenti di un oggetto; ho realizzato di fatto una routine che salva tutti 
+i valori dei membri di un oggetto, ricorsivamente, tenendo conto che in Perl 
+abbiamo normalmente a che fare con scalari, hash e array; in modo speculare 
+anche la routine di caricamento ricostruisce le strutture interne della classe. 
+Per molto tempo questa tecnica &egrave; stata l'unica usata nel MUD nel senso che 
+qualunque esigenza di "persistenza" dei dati &egrave; stata ridotta a questa sola 
+modalit&agrave;.<br>
+<br>
+Solo recentemente, con l'uscita della versione Perl 5.010, ho 
+iniziato ad utilizzare anche un database esterno per garantire la "persistenza" 
+dei dati in modo da poterli accedere usando SQL; in particolare la scelta &egrave; 
+caduta su <a href="http://www.sqlite.org/" target="_blank" rel="nofollow"><b>SQLite 
+</b></a>la cui libreria &egrave; disponibile nella versione di Perl scaricabile da <a href="http://www.activestate.com/?hdr=1" target="_blank" rel="nofollow"><b>ActiveState </b></a>senza la necessit&agrave; di aggiungere delle 
+patch.<br>
+<br>
+Ciascun comando disponibile per l'utente &egrave; stato ricondizionato ad 
+un singolo Package, cio&egrave; un singolo file per ogni comando, attivabile attraverso 
+l'interpretazione dell'input ricevuto da chi &egrave; collegato tramite il terminale. 
+In questo senso Perl &egrave; particolarmente flessibile visto che permette di 
+includere le parti di codice software solo nel momento in cui servono, ma anche 
+di "scaricarli" dalla memoria e "ricaricarli" in memoria rispetto alle modifiche 
+apportate ai singoli file sorgente senza necessit&agrave; di bloccare e riavviare il 
+driver.<br>
+<br>
+Questa caratteristica pervade l'intero MUD: ogni oggetto, ogni 
+arma, stanza, personaggio o mostro nemico viene posto in essere a partire da 
+ciascun file sorgente; &egrave; possibile modificarlo al&nbsp; volo e forzare il driver a 
+rileggerlo nuovamente per recepire immediatamente le modifiche. Se il nuovo file 
+sorgente &egrave; corretto, bene, senn&ograve; succedono cose divertenti, come fluttuare 
+improvvisamente nel vuoto o veder comparire inspiegabili crepe nel continuum 
+spazio-temporale...<br>
+<br>
+L'attivit&agrave; di sviluppo si &egrave; fermata pi&ugrave; volte, per 
+vari motivi, con pause lunghe talvolta anche di un anno intero. Ma ogni volta 
+che ho ripreso, perch&eacute; le belle idee sono quelle che durano nel tempo e che 
+danno soddisfazione.<br>
+<br>
+Per avere un'idea di come funziona realmente, 
+all'indirizzo <a href="telnet:88.51.209.244">88.51.209.244</a> porta 23, c'&egrave; una 
+istanza in versione Alpha di questo MUD.&nbsp;<br>
+<br>
+<br>
+<h3 class="goog-ws-page-title" id="goog-ws-page-title-header" xmlns="http://www.w3.org/1999/xhtml"><span id="goog-ws-page-title" dir="ltr">1. 
+Installazione</span> </h3>
+<b>Prerequisiti</b><br>
+E' necessario installare Perl 
+5.010. La versione qui impiegata &egrave; ActivePerl 5.010 di ActiveState, per il fatto 
+che viene la libreria di SQLite inclusa in questa versione. <br>
+L'installazione 
+in s&eacute; consiste nel decomprimere lo zip file per ricostruisce la struttura delle 
+directory.<br>
+<br>
+<b>Avvio e configurazione del MUD</b><br>
+Il driver normalmente 
+viene avviato da linea di comando come un normale script Perl, specificando di 
+seguito il file di configurazione da impiegare:<br>
+<br>
+<span style="font-family: courier new,monospace;">$ perl driver.pl muddrv.cfg</span> 
+<br>
+<br>
+<b>Interfaccia utente - Client telnet</b><br>
+Per entrare nel MUD ci si 
+deve collegare via "telnet". <br>
+La prima volta che un nuovo utente si connette 
+deve rispondere ad un breve questionario: nome, genere, razza, provenienza; il 
+contenuto delle domande e le risposte ammissibili sono state codificate (cio&egrave; 
+programmate) nella stessa stanza di "startup" 
+(std/room/startup.pl)<br>
+<br>
+<b>Driver<br>
+</b>Questo script utilizza in primo 
+luogo il modulo MudDrv.pm. Si tratta di un oggetto specializzato che funge da 
+motore del MUD e che utilizza le librerie standard IO::Socket, IO::Select per 
+porre in essere essenzialmente:<br>
+&nbsp;&nbsp;&nbsp; - un listner sulla porta specificata 
+nella configurazione, per accettare nuove connessioni;<br>
+&nbsp;&nbsp;&nbsp; - un selector per 
+accettare gli input di tutti gli utenti connessi e gestire le risposte.<br>
+&nbsp;&nbsp;&nbsp; - 
+un gestore di oggetti che interagiscono tra di loro e con gli utenti 
+connessi.<br>
+Il file di configurazione stabilisce i parametri vitali per il 
+corretto funzionamento del driver stesso, come la struttura delle directory, la 
+porta tcp alla quale connettersi, i vari timeout, l'elenco degli 
+indirizzi-pirata bannati, ecc.<br>
+<br>
+Oltre al file di configurazione iniziale 
+(muddrv.cfg), che contiene informazioni basilari per il driver, sono presenti 
+altri file di set-up; lo scopo di questi &egrave; di consentire una rapida modifica 
+dell'aspetto del MUD, come le traduzioni in italiano o in un'altra lingua di 
+tutti i messaggi emessi dal driver senza necessariamente dover fermare e 
+riavviare il driver; cio&egrave; &egrave; possibile obbligare il driver a rileggere i file di 
+configurazione in qualunque momento in modo che le modifiche vengano recepite 
+immediatamente, se possibile.<br>
+<br>
+Tranne il file di configurazione iniziale, 
+tutti gli altri sono messi sotto la directory bin/setup; comunque anche la 
+struttura delle directory &egrave; parametrizzabile sul primo file di 
+configurazione.<br>
+&nbsp; - <b>constants.cfg</b> consente di modificare i parametri 
+di base, la lista dei canali di chat, i colori, il calendario, il tempo 
+atmosferico, i livelli di avanzamento, i nomi "banditi" ecc. Essenzialmente, 
+ogniqualvolta c'&egrave; bisogno di un "valore costante" ho pensato di fornire il luogo 
+centralizzato dove poterle modificare con comodit&agrave;. <br>
+&nbsp; - <b>messages.cfg</b> 
+consente di modificare qualunque messaggio "standard" del driver: per esempio il 
+messaggio associato alla chiave "PromptLogin" manda il messaggio "Chi sei?" al 
+terminale dell'utente appena si collega. <br>
+Per poter avviare un "nuovo" MUD &egrave; 
+necessario mettere mano a questi due file.<br>
+<br>
+Nel corso del tempo sono 
+spuntati anche altri file di set-up, del tutto simili ai precedenti due ma 
+specializzati nel loro particolare scopo.<br>
+&nbsp; - <b>actions.cfg</b> consente di 
+ridefinire i comandi di base: per esempio quando l'utente d&agrave; il comando "<span style="font-family: courier new,monospace;">aiuto</span>", in realt&agrave; viene 
+invocato la subroutine "cmd_help" presente nel file "_help.pl" da qualche parte 
+tra i moduli del MUD; in questo caso la definizione nel file di configurazione 
+sar&agrave; qualcosa di simile a&nbsp; <span style="font-family: courier new,monospace;">aiuto = cmd::ghost::_help::cmd_help 
+</span><br>
+&nbsp; - <b>emotes.cfg</b> &egrave; la lista strutturata delle "emote" 
+riconosciute nel MUD; per esempio il comando pacca permette di salutare, 
+sorridere, dare una sonora pacca sul didietro a qualcuno (ma anche sulla testa o 
+sulle spalle, ecc.) oppure di produrre altri tipi di manifestazioni personali. 
+<br>
+&nbsp; - <b>adverbs.cfg</b> &egrave; la lista degli avverbi riconosciuti nell'ambito 
+delle "emote"; &egrave; possibile caratterizzare il modo con il quale una certa "emote" 
+si manifesta: per esempio dare il comando pacca gino forte testa dovrebbe dare 
+una pacca bella forte sulla testa di Gino, chiunque esso sia... <br>
+Questi tre 
+file di configurazione non dovrebbero essere modificati molto, a meno che non si 
+debba effettuare una "traduzione" in una lingua straniera; si pu&ograve; notare come il 
+file contenga due serie di definizioni, quella in Inglese e quella in Italiano: 
+dato che l'italiano &egrave; in coda al file, e viene letto per ultimo, prevale 
+rispetto alla prima definizione. Tutto questo vorrebbe dare una parvenza di 
+internazionalizzazione del codice che tendenzialmente utilizza nomi in inglese 
+per le parti relative al "cuore" del codice e nomi in italiano per le parti pi&ugrave; 
+vicine all'utente.<br>
+<br>
+<b>Archivio dati - SQLite</b><br>
+Il driver impiega un 
+database SQLite per garantire la persistenza di buona parte dei dati, ma per 
+semplicit&agrave; di gestione molti altri dati sono mantenuti in alcuni semplici file 
+di configurazione; tipico il caso del file di configurazione del singolo 
+utente.<br>
+<br>
+La scelta di usare SQLite &egrave; avvenuta in modo molto semplice: la 
+versione Perl 5.010 scaricata da ActiveState contiene gi&agrave; la libreria SQLite, 
+senza dover fare la fatica di scaricare e installare altri pezzi. La versione 
+qui disponibile &egrave; SQLite 3.3.7.<br>
+<br>
+Per l'amministrazione del database ho 
+utilizzato il plug-in di Firefox, semplice, intuitiva, efficace. In alternativa 
+si pu&ograve; utilizzare uno script Perl sviluppato dal sottoscritto che fa da 
+interfaccia testuale, estremamente spartana ma efficace; in alternativa, per 
+Windows, si pu&ograve; usare l'interfaccia sqlite3.exe scaricabile dal sito di 
+{SQLite}. Per il fatto che l'intero MUD &egrave; scritto in Perl ed e programmabile in 
+Perl, per gli amministratori del MUD &egrave; disponibile il comando "sql" che consente 
+di fare quasi le medesime cose che lo script appena citato.<br>
+<br>
+Nel database 
+sono definite inizialmente le seguenti tabelle<br>
+&nbsp; - 
+<b>muddrv_channel_buffer</b> contenuto dei "canali chat"&nbsp; <br>
+&nbsp; - 
+<b>muddrv_channel_subscriber</b> partecipanti ai "canali chat" <br>
+&nbsp; - 
+<b>muddrv_mailbox</b> contenuto delle caselle di posta interna <br>
+&nbsp; - 
+<b>muddrv_passwords</b> criptate&nbsp; <br>
+&nbsp; - <b>muddrv_room_annotation</b> mantiene 
+le annotazioni fatte nelle stanze <br>
+&nbsp; - <b>muddrv_standard_level</b> tabella 
+dei valori standard di ogni livello e razza&nbsp; <br>
+&nbsp; - 
+<b>muddrv_stock_exchange</b> tabella dei valori dei beni in circolazione sul 
+mercato <br>
+&nbsp; - <b>muddrv_user_info</b> informazioni statistiche di ciascun 
+utente&nbsp; <br>
+<br>
+<br>
+<br>
+<h3 class="goog-ws-page-title" id="goog-ws-page-title-header" xmlns="http://www.w3.org/1999/xhtml"><span id="goog-ws-page-title" dir="ltr">2. 
+Guida tecnica</span> </h3>
+<b>Engine del MUD<br>
+</b>Il MUD usa un breve script 
+Perl <b>driver.pl<br>
+</b>Questo script utilizza in primo luogo il modulo 
+MudDrv.pm. Si tratta di un oggetto specializzato che funge da motore del MUD e 
+che utilizza le librerie standard IO::Socket, IO::Select per porre in essere 
+essenzialmente:<br>
+&nbsp;&nbsp;&nbsp; - un listner sulla porta specificata nella 
+configurazione, per accettare nuove connessioni;<br>
+&nbsp;&nbsp;&nbsp; - un selector per 
+accettare gli input di tutti gli utenti connessi e gestire le risposte.<br>
+&nbsp;&nbsp;&nbsp; - 
+un gestore di oggetti che interagiscono tra di loro e con gli utenti 
+connessi.<br>
+Il file di configurazione stabilisce i parametri vitali per il 
+corretto funzionamento del driver stesso, come la struttura delle directory, la 
+porta tcp alla quale connettersi, i vari timeout, l'elenco degli 
+indirizzi-pirata bannati, ecc.<br>
+<br>
+Oltre al file di configurazione iniziale 
+(muddrv.cfg), che contiene informazioni basilari per il driver, sono presenti 
+altri file di set-up; lo scopo di questi &egrave; di consentire una rapida modifica 
+dell'aspetto del MUD, come le traduzioni in italiano o in un'altra lingua di 
+tutti i messaggi emessi dal driver senza necessariamente dover fermare e 
+riavviare il driver; cio&egrave; &egrave; possibile obbligare il driver a rileggere i file di 
+configurazione in qualunque momento in modo che le modifiche vengano recepite 
+immediatamente, se possibile.<br>
+<br>
+Tranne il file di configurazione iniziale, 
+tutti gli altri sono messi sotto la directory bin/setup; comunque anche la 
+struttura delle directory &egrave; parametrizzabile sul primo file di 
+configurazione.<br>
+&nbsp; - <b>constants.cfg</b> consente di modificare i parametri 
+di base, la lista dei canali di chat, i colori, il calendario, il tempo 
+atmosferico, i livelli di avanzamento, i nomi "banditi" ecc. Essenzialmente, 
+ogniqualvolta c'&egrave; bisogno di un "valore costante" ho pensato di fornire il luogo 
+centralizzato dove poterle modificare con comodit&agrave;. <br>
+&nbsp; - <b>messages.cfg</b> 
+consente di modificare qualunque messaggio "standard" del driver: per esempio il 
+messaggio associato alla chiave "PromptLogin" manda il messaggio "Chi sei?" al 
+terminale dell'utente appena si collega. <br>
+Per poter avviare un "nuovo" MUD &egrave; 
+necessario mettere mano a questi due file.<br>
+<br>
+Nel corso del tempo sono 
+spuntati anche altri file di set-up, del tutto simili ai precedenti due ma 
+specializzati nel loro particolare scopo.<br>
+&nbsp; - <b>actions.cfg</b> consente di 
+ridefinire i comandi di base: per esempio quando l'utente d&agrave; il comando "<span style="font-family: courier new,monospace;">aiuto</span>", in realt&agrave; viene 
+invocato la subroutine "cmd_help" presente nel file "_help.pl" da qualche parte 
+tra i moduli del MUD; in questo caso la definizione nel file di configurazione 
+sar&agrave; qualcosa di simile a&nbsp; <span style="font-family: courier new,monospace;">aiuto = cmd::ghost::_help::cmd_help 
+</span><br>
+&nbsp; - <b>emotes.cfg</b> &egrave; la lista strutturata delle "emote" 
+riconosciute nel MUD; per esempio il comando <span style="font-family: courier new,monospace;">pacca </span>permette di salutare, 
+sorridere, dare una sonora pacca sulla spalla a qualcuno (ma anche sulla testa o 
+sul didietro, ecc.) oppure di produrre altri tipi di manifestazioni personali. 
+<br>
+&nbsp; - <b>adverbs.cfg</b> &egrave; la lista degli avverbi riconosciuti nell'ambito 
+delle "emote"; &egrave; possibile caratterizzare il modo con il quale una certa "emote" 
+si manifesta: per esempio dare il comando pacca gino forte testa dovrebbe dare 
+una pacca bella forte sulla testa di Gino, chiunque esso sia... <br>
+Questi tre 
+file di configurazione non dovrebbero essere modificati molto, a meno che non si 
+debba effettuare una "traduzione" in una lingua straniera; si pu&ograve; notare come il 
+file contenga due serie di definizioni, quella in Inglese e quella in Italiano: 
+dato che l'italiano &egrave; in coda al file, e viene letto per ultimo, prevale 
+rispetto alla prima definizione. Tutto questo vorrebbe dare una parvenza di 
+internazionalizzazione del codice che tendenzialmente utilizza nomi in inglese 
+per le parti relative al "cuore" del codice e nomi in italiano per le parti pi&ugrave; 
+vicine all'utente.<br>
+<br>
+<b>Archivio dati - SQLite</b><br>
+Il driver impiega un 
+database SQLite per garantire la persistenza di buona parte dei dati, ma per 
+semplicit&agrave; di gestione molti altri dati sono mantenuti in alcuni semplici file 
+di configurazione; tipico il caso del file di configurazione del singolo 
+utente.<br>
+<br>
+La scelta di usare SQLite &egrave; avvenuta in modo molto semplice: la 
+versione Perl 5.010 scaricata da ActiveState contiene gi&agrave; la libreria SQLite, 
+senza dover fare la fatica di scaricare e installare altri pezzi. La versione 
+qui disponibile &egrave; SQLite 3.3.7.<br>
+<br>
+Per l'amministrazione del database ho 
+utilizzato il plug-in di Firefox, semplice, intuitiva, efficace. In alternativa 
+si pu&ograve; utilizzare uno script Perl sviluppato dal sottoscritto che fa da 
+interfaccia testuale, estremamente spartana ma efficace; in alternativa, per 
+Windows, si pu&ograve; usare l'interfaccia sqlite3.exe scaricabile dal sito di 
+{SQLite}. Per il fatto che l'intero MUD &egrave; scritto in Perl ed e programmabile in 
+Perl, per gli amministratori del MUD &egrave; disponibile il comando "sql" che consente 
+di fare quasi le medesime cose che lo script appena citato.<br>
+<br>
+Nel database 
+sono definite inizialmente le seguenti tabelle<br>
+&nbsp; - 
+<b>muddrv_channel_buffer</b> contenuto dei "canali chat"&nbsp; <br>
+&nbsp; - 
+<b>muddrv_channel_subscriber</b> partecipanti ai "canali chat" <br>
+&nbsp; - 
+<b>muddrv_mailbox</b> contenuto delle caselle di posta interna <br>
+&nbsp; - 
+<b>muddrv_passwords</b> criptate&nbsp; <br>
+&nbsp; - <b>muddrv_room_annotation</b> mantiene 
+le annotazioni fatte nelle stanze <br>
+&nbsp; - <b>muddrv_standard_level</b> tabella 
+dei valori standard di ogni livello e razza&nbsp; <br>
+&nbsp; - 
+<b>muddrv_stock_exchange</b> tabella dei valori dei beni in circolazione sul 
+mercato <br>
+&nbsp; - <b>muddrv_user_info</b> informazioni statistiche di ciascun 
+utente <br>
+<br>
+<b>Funzionalit&agrave; di base - Libreria</b><br>
+Le funzionalit&agrave; di 
+base, di utilit&agrave;, il nucleo delle librerie &egrave; reso disponibile in un unico grande 
+package MudCore.pm suddivise per categoria:<br>
+&nbsp; - <i>Utility</i>: manipolazioni 
+di stringhe, codici escape ANSI, ricerca, conversioni. <br>
+&nbsp; - <i>File</i>: 
+gestione di file, nome di file, navigazione directory, log <br>
+&nbsp; - 
+<i>Config</i>: gestione di file di configurazione (lettura e scrittura di 
+oggetti) <br>
+&nbsp; - <i>User-Client related</i>: salva, chiudi <br>
+&nbsp; - <i>Core</i>: 
+interazione con il driver, le connessioni, i salvataggi ecc. <br>
+&nbsp; - <i>Parsing 
+e I/O</i>: interazione con i client <br>
+&nbsp; - <i>Object Interface Library</i>: 
+interazione con gli oggetti del MUD <br>
+<br>
+<b>Componenti aggiuntivi - 
+Daemon</b><br>
+Le funzionalit&agrave; che trasformano un banale "engine" in un 
+affascinante MUD sono racchiusi in alcuni componenti aggiuntivi che ho 
+affettuosamente chiamato "daemon". <br>
+<br>
+Questa &egrave; la lista dei daemon 
+presenti<br>
+&nbsp; - <b>actions</b>: Talvolta &egrave; utile maneggiare un comando come un 
+oggetto statico. <br>
+&nbsp; - <b>channel</b>: Gestione dei canali di chat interna. 
+<br>
+&nbsp; - <b>combat</b>: Gestione del combattimento dall'inizio fino alla vittoria 
+o alla sconfitta&nbsp; <br>
+&nbsp; - <b>death</b>: Gestione del decesso di un personaggio. 
+<br>
+&nbsp; - <b>emote</b>: Gestione delle "emozioni"&nbsp; <br>
+&nbsp; - <b>hazards</b>: 
+Gestione degli eventi rischiosi e catastrofici <br>
+&nbsp; - <b>level</b>: Gestione 
+dei livelli dei personaggi <br>
+&nbsp; - <b>mail</b>: Gestiione della posta 
+"elettronica" interna al MUD <br>
+&nbsp; - <b>move_dir</b>: Gestione del movimento&nbsp; 
+<br>
+&nbsp; - <b>patch</b>: Gestione delle patch sui profili <br>
+&nbsp; - <b>room_desc</b>: 
+Gestione della descrizione delle stanze <br>
+&nbsp; - <b>stock</b>: Gestione dei 
+prezzi degli oggetti presenti sul mercato <br>
+&nbsp; - <b>time</b>: Gestione del 
+tempo, stagioni, clima.&nbsp; <br>
+<br>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Uso: stat
+Senza parametri mostra il nome della stanza.
+In futuro altre caratteristiche... 

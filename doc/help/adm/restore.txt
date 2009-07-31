@@ -1,0 +1,2 @@
+Uso: restore [username]
+Ripristina le statistiche di un certo utente (wounds...)

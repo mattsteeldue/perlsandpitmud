@@ -1,0 +1,5 @@
+Uso: alias <verbo> [ <command> ]
+Gli 'alias' si usano per creare delle abbreviazioni di altri comandi oppure per dare una sequenza di comandi in un unica parola. Consente di definire dei nuovi comandi formati da altri comandi già definiti. E` consentito definire alias di altri alias. Per eliminare un alias si usa il comando '{B}unalias{/B}'. Per modificare un alias è necessario prima eliminarlo.
+Il comando 'alias' dato da solo, mostra l'elenco degli attuali alias che l'utente ha definito. Il comando '{B}alias <verbo>{/B}' mostra l'attuale definizione del <verbo>, oppure un messaggio di errore. Il comando 'alias <verbo> <command>' crea effettivamente un nuovo alias, oppure dichiara che già esiste.
+Esempio: {B}alias rpg channel rpg{/B} per definire l'alias del canale 'rpg'.
+Ora, quando l'utente digita solo 'rpg xxx yyy' è come se fosse stato digitato per intero 'channel rpg xxx yyy'.

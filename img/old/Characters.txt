@@ -1,0 +1,52 @@
+Astrea	(I-7)	ninfa, regina della terra dell'Acqua
+Baar	(I-1)	vecchio ortolano di Salazar
+Barod	(I-1)	amico d'infanzia di Nihal
+Dagon	(I-12)	membro anziano del consiglio dei maghi
+Darnel	(I-5)	re della terra del Vento
+Dhuval	(I-16)	veterano morto, cavaliere del drago Oarf
+Dola	(I-14)	gnomo, generale dell'esercito del Tiranno, fratello di Ido (drago nero)
+Eleusi	(I-20)	sacerdotessa nella terra del sole, madre di Jona.
+Fen	(I-6)	cavaliere di drago, compagno di Soana, morto in battaglia
+Flogisto	(I-15)	mago della terra del sole, vecchio maestro di Sennar durante l'apprendistato per diventare consigliere
+Gaart	(I-6)	drago di Fen
+Galla	(I-7)	re della Terra dell'Acqua
+Ido	(I-17)	gnomo, cavaliere di drago e maestro di Nihal, fratello di Dola
+Jona	(I-20)	bambino, figlio di Eleusi
+Kala	(I-4)	sorella di Sennar, mai vista.
+Lahar	(I-13)	guardia, guida dell'accademia il primo giorno 
+Laio	(I-14)	sudiero della terra della Notte, ex compagno di accademia di Nihal e suo amico
+Leven	(I-16)	antico  re della guerra dei duecento anni
+Livon	(I-1)	padre adottivo di Nihal, fratello di Soana, ucciso dai fammin.
+Malerba	(I-13)	servo deforme all'accademia
+Nammen	(I-16)	antico re dei mezelfi, figlio di Leven, che inaugurò un periodo di pace al termine della guerra dei duecento anni
+Nelgar	(I-17)	sortintendente della base della terra del sole
+Nihal	(I-1)	ragazza guerriero e cavaliere di drago, ultimo mezzelfo del Mondo Emerso.
+Oarf	(I-18)	drago di Nighal, ex drago di Dhuval
+Padre della foresta	(I-5)	...Albero fondamentale della foresta
+Parel	(I-4)	cavaliere al quale faceva da scudiero il padre di Sennar
+Parsel	(I-13)	maestro all'accademia
+Phos	(I-5)	folletto, capo della comunità della foresta della Terra del Vento
+Raven	(I-11)	generale supremo dell'ordine dei cavalieri di drago della terra del sole, capo dell'accademia a Makrat
+Sate	(I-20)	gnomo, membro del consiglio dei maghi, rappresentante della terra del sole
+Sennar	(I-2)	membro del consiglio dei maghi, rappresentante della terra del Vento, migliore amico di Nihal
+Soana	(I-3)	maga, ex membro del consiglio dei maghi, prima maestra di magia di Sennar, sorella di Livon
+Sulana	(I-15)	giovanissima regina della terra del sole
+Vesa	(I-17)	drago di Ido (vesa=veloce). dalla terra del fuoco
+Mamma	(ii-1)
+Faraq	(ii-1)	Locandiere
+Man	(ii-1)	Figlia di Kala
+Aires	(ii-2)	Pirata, Figlia di Rool
+Rool	(ii-2)	Pirata, capitano.
+Mauthar	(ii-4)	Cacciatore di taglie, catturò Rool
+Benares	(ii-4)	Amante di Aires
+Dodi	(ii-4)	Pirata, marinaio.
+Pewar   (ii-5)  Padre di Laio (e amico di Raven)
+Moni    (ii-7)  Veggente delle isole Vanerie
+Cob     (ii-10) Bambino di Zalenia
+Ondine  (ii-10) Cuoca della prigione di Zalenia
+Mathon  (ii-10) Compagno di viaggio con Laio
+Varen   (ii-10) Conte di Zalenia
+Rodhan  (ii-14) Mago nemico
+Nereo   (ii-14) Re di Zalenia
+Pelamas (ii-14) Ambasciatore di Zalenia
+Ganna   (ii-18) Mago di Campo

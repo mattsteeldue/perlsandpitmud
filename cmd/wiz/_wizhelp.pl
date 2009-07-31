@@ -1,0 +1,31 @@
+=pod
+
+Uso: wizhelp <voce>    per avere una pagina di help su una certa <voce>
+
+=cut
+
+# ---------------------------------------------------------------------
+# Admin version.
+# This file is under cmd/adm.
+sub cmd_wizhelp { 
+    my $me     = shift;
+    my $verb   = shift;
+    my $voce   = shift || 'wizhelp';
+    my $this   = driver();
+    my $pl     = current_user();
+    my $fil    = getdir('dirdochelpwiz') . "${voce}.txt" ;
+
+    unless( -f $fil ) { 
+        notify_fail( parse_std_msg('Actions_Help_ko', $voce ) );
+        return 0;
+    };
+    
+    tell_object( $pl, "$fil\n" ) if $voce && $pl->wizardhood();
+    tell_object( $pl, parse_color("{BOLD}  -- $voce --\n" ) ) if $voce;
+
+    cat_wrap( $fil );    
+
+    tell_object( $pl, parse_color("{BOLD}  -- --\n" ) ) if $voce;
+    return 1;
+}
+

@@ -1,0 +1,15 @@
+
+         ** {B}Piani bassi{/B} **
+                             
+                    S        
+              o o o          
+         M  o       o        
+           o  \   /  o       
+           o    C    o       
+           o  /   \  o       
+            o       o  T     
+              o o o          
+            A                
+A : Arena            M : Magazzini Generali
+S : Scuderie         T : Taverna
+G : Gardini centrali

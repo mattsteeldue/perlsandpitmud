@@ -1,0 +1,4 @@
+#
+# main_long.txt
+#
+Aa = This is the forest that cover all the valley.

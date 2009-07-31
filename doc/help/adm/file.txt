@@ -1,0 +1,6 @@
+Elenco dei comandi relativi ai file.
+    cat     <file>
+    cd      [directory]
+    ls      [directory]
+    pwd 
+    tail    <file>

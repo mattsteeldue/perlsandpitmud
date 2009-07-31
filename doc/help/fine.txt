@@ -1,0 +1,3 @@
+Uso: fine
+Chiude il collegamento, si usa per uscire dal Mondo Emerso.
+Equivale al comando '{B}quit{/B}'

@@ -1,0 +1,139 @@
+#
+# em_short.txt
+# Descrizioni per la griglia del Mondo emerso.
+
+
+0a = Mare
+0b = Golfo di Barahar
+0c = Fiume Saar
+0d = Piccolo Mare
+0e = Golfo di Lamar
+0f = Lago Hantir
+0g = Lago della Terra del Fuoco
+0h = Fiume Nassel
+0i = Fiume Passel
+0z = Grande deserto
+
+# Toponimi di dettaglio
+
+A_ = Terra del Vento - Fiume di Salazar affluente del Saar
+A- = Terra del Vento - Fiume di Salazar affluente del Saar
+A\ = Terra del Vento - Fiume di Salazar affluente del Saar
+A' = Terra del Vento - Fiume di Salazar affluente del Saar
+
+Aa = Terra del Vento
+Ab = Terra del Vento - Foresta
+Ac = Terra del Vento - Prateria
+Ad = Terra del Vento - Foresta Occidentale
+Ae = Terra del Vento - Margine della Foresta
+
+At = Terra del Vento - Sentiero della foresta
+Au = Terra del Vento - Sentiero della foresta
+Av = Terra del Vento - Sentiero Salazar-Laodamea
+Aw = Terra del Vento - Curva del sentiero
+Ax = Sentiero attorno a Salazar
+A* = Sentiero attorno a Salazar
+A{ = Sentiero nella foresta
+A} = Sentiero nella foresta
+A[ = Salazar...
+A] = Salazar...
+
+Ba = Terra dell'Acqua
+Bb = Terra dell'Acqua - Foresta occidentale
+Bc = Terra dell'Acqua - Cascate di Nael
+Bd = Terra dell'Acqua - Monti del Sole
+Be = Terra dell'Acqua - Paludi
+Bf = Terra dell'Acqua - Marca delle Paludi
+Bg = Terra dell'Acqua - Marca delle Boschi
+Bv = Terra dell'Acqua - Sentiero Laodamea-Salazar
+Bx = Darea
+By = Loos
+Bz = Laodamea
+
+Ca = Terra del Mare
+Cp = Terra del Mare *
+Cb = Terra del Mare - Monti del Sole
+Cc = Terra del Mare - Bosco Marino
+Cd = Terra del Mare - Piccolo Mare
+Ce = Terra del Mare - Paludi
+Cf = Terra del Mare - Golfo di Barahar
+Cg = Terra del Mare - Promontorio Ultimo
+Co = Terra del Mare - Promontorio Ultimo *
+Ch = Terra del Mare - Deserto Centrale
+Ci = Terra del Mare - Foresta Centrale
+Cj = Terra del Mare - Foresta del Nord
+Ck = Terra del Mare - Monti di Rondal
+Cl = Terra del Mare - Golfo di Lamar
+Cm = Terra del Mare - Isole di Mista
+Cn = Terra del Mare - Scogliere Ascose
+Cu = Lamar
+Cv = Lome
+Cw = Porto di Giafta
+Cx = Faro di Dessa
+Cy = Barahar
+Cz = Laia
+# Lamar, Lome, Promontorio ultimo, POrto di Giafta
+
+#Da = Terra del Sole
+Db = Terra del Sole - Monti di Rondal
+Dc = Terra del Sole - Foresta del Nord
+Dd = Terra del Sole - Monti della Sershet
+De = Terra del Sole - Grande deserto
+Di = Terra del Sole - Foresta Centrale
+Dx = Damilar
+Dy = Selva
+Dz = Makrat
+ 
+Ea = Terra dei Giorni
+Eb = Terra dei Giorni - Monti della Sershet
+Ec = Terra dei Giorni - Antica foresta di Bersith
+Ed = Terra del Giorni - Grande deserto
+Ee = Terra del Giorni - Propaggini del Grande deserto
+Ef = Terra del Giorni - Rehvni
+Eg = Terra dei Giorni - Lago di Merish (ora paludi)
+Ez = Seferdi
+
+Fa = Terra della Notte
+Fb = Terra della Notte - Rehvni
+Fc = Terra della Notte - Grande foresta di Mool (ora foresta Morta)
+Fd = Terra della Notte - Grande deserto
+Fe = Terra della Notte
+#Fz = Asteria (già Narbert)
+Fz = Narbert
+
+Ga = Terra del Fuoco
+Gb = Terra del Fuoco - Thal (Padre dei Monti)
+Gc = Terra del Fuoco - Hora (Bocca Meridionale)
+Gd = Terra del Fuoco - Montagne Nere
+Ge = Terra del Fuoco - Campi morti
+Gf = Terra del Fuoco - Monti
+Gg = Terra del Fuoco - Ghana (Barriera di Fuoco)
+Gz = Assa
+
+Ha = Terra delle Rocce
+Hb = Terra delle Rocce - Montagne Nere
+Hc = Terra delle Rocce - Daress (Monti del Nord)
+0j = Vette dei Monti del Nord
+Hd = Terra delle Rocce - Foresta di Pietra
+
+He = Terra delle Rocce - Riva del fiume Nassel
+Hf = Terra delle Rocce - Riva del fiume Nassel
+Hg = Terra delle Rocce - Riva del fiume Nassel
+Hh = Terra delle Rocce - Riva del fiume Nassel
+Hi = Terra delle Rocce - Riva del fiume Nassel
+Hj = Terra delle Rocce - Riva del fiume Nassel
+
+Hk = Terra delle Rocce - Riva del fiume Passel
+Hl = Terra delle Rocce - Riva del fiume Passel
+Hm = Terra delle Rocce - Riva del fiume Passel
+Hn = Terra delle Rocce - Riva del fiume Passel
+Ho = Terra delle Rocce - Riva del fiume Passel
+Hp = Terra delle Rocce - Riva del fiume Passel
+
+Hz = Rephtà
+
+Ia = Grande Terra
+Iz = Nuova Enawar
+
+Ja = Oltre il Saar
+

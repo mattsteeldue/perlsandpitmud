@@ -1,0 +1,3 @@
+Uso: kal
+Mostra l'epoca dell'anno nella quale ti trovi ora all'interno del Mondo Emerso. Restituisce la stagione, il mese, il giorno e l'ora. Di seguito offre anche la fase lunare.
+Infine viene data un'informazione metereologica (temperatura, pressione, umidità).

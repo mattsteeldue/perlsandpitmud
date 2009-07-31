@@ -1,0 +1,3 @@
+Uso: snoop [<username> [why]]
+Spia tutto quello che dice, vede e fa l'utente indicato (se può essere spiato). E' possibile aggiungere una nota sul motivo dello snooping in modo che l'amministratore sia un po' più indulgente. Il comando viene tracciato su un log e la nota viene scritta di seguito nel log stesso, quindi attenzione. Per interrompere lo 'snooping' dare 'snoop' senza parametri.
+è possibile spiare anche un 'mob' per fini di programmazione e bugfix. Vedi anche il comando 'forcesnoop'.

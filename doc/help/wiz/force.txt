@@ -1,0 +1,2 @@
+Uso: force <target> <commands...>
+Consente di forzare un altro utente oppure un mob ad eseguire i comando specificato, come se fosse stato inserito da terminale.

@@ -1,0 +1,9 @@
+#
+# main_short.txt
+#
+0a = Forest.
+0b = Mountain.
+0c = Torrent.
+
+Aa = Forest.
+

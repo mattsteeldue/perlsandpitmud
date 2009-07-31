@@ -1,0 +1,12 @@
+Uso: sql <statement>
+The <statement> must be a one-row-only SQL statement.
+The following statemente are also recognized:
+
+help        shows quick help
+version     shows SQLite version
+desc <ob>   shows the "create" SQL statement of <ob>
+func <ob>   for example fun 'inc',1,sub{1+\$_ },'create_function'
+*<fun>      does a DBI perl command \$dbh->... try 'sql help *'
+export <t>  table t -> t.txt
+import <f>  a file f.txt -> table f
+<any>       interprets an SQL statement.

@@ -1,0 +1,14 @@
+Il MUD si basa sui libri 'Cronache del Monso Emerso' di Licia Troisi.
+La trama si sviluppa su un mondo immaginario abitato da varie razze.
+Il MUD e` in ancora in fase di sviluppo ma e` totalmente aperto per
+essere visitato. L'ambientazione iniziale e` sulla Torre di Salazar.
+L'intero Mondo e` rappresentato su una grande griglia di 124x100
+luoghi. Sono disponibili numerose emote per interagire e alcuni canali
+per comunicare tra visitatori.
+
+This MUD is based on the books 'Cronache del Mondo Emerso' written
+by Licia Troisi. The plot develops on an imaginary world populated by
+various races. The MUD is still under development but is open to
+visit. Initial setting is in the Tower of Salazar. The whole world is
+represented by a sizeable 124x100 grid. Many 'emote' are available to
+interact and few channel to communicate among visitors.

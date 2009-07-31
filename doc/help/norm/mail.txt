@@ -1,0 +1,10 @@
+Uso: mail [ nome | n [del] ] 
+Questo comando è disponibile solo stando all'interno di un Ufficio Postale.
+Il comando '{B}mail{/B}' consente di esaminare la tua casella di posta nel MUD, di leggere e spedire messaggi agli altri utenti (o a te stesso).
+ - '{B}mail{/B}' da solo, offre la lista dei messaggi presenti; quelli ancora da leggere sono preceduti da un asterisco (*).
+ - '{B}mail <n>{/B}' per leggere il messaggio indicato dal numero 'n'.
+ - '{B}mail <n> R{/B}' per leggere e rispondere al mittente.
+ - '{B}mail <n> del{/B}' per leggere e cancellare il messaggio.
+ - '{B}mail user{/B}' per iniziare a scrivere un messaggio all'utente 'user'; inizia una fase di immissione dati che si puo concludere solo inserendo un puntino singolo a capo riga. Una volta dato il puntino su una riga vuota, viene proposta l'anteprima del messaggio e chiesta conferma per l'inoltro.
+
+L'ufficio postale di Salazar si trova a sud-basso-ovest-ovest partendo dalla terrazza d'inizio.

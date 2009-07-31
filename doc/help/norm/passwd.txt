@@ -1,0 +1,2 @@
+Uso: passwd
+Comando per cambiare password. Viene richiesto di digitare la vecchia password, e di seguito la nuova password, due volte, per conferma. Se la vecchia password non viene data correttamente oppure la seconda conferma non corrisponde con la prima, il cambio viene interrotto.

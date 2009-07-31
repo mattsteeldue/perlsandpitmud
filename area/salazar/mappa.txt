@@ -1,0 +1,12 @@
+
+{B}Mappa di Salazar{/B}
+
+Salazar è costruita all'interno di una torre di forma grosso modo cilindrica alta 1200 braccia strutturata in quattro livelli principali.
+I livelli sono collegati da ampie rampe, sicché quando si cambia di livello ci si sposta anche lungo la circonferenza della torre.
+La mappa è suddivisa in quattro parti più lo schema delle rampe, ogni parte descrive un certo livello della torre:
+
+{B}b{/B}assi  {B}m{/B}edi  {B}a{/B}lti  {B}t{/B}errazza  {B}r{/B}ampe.
+
+Usa '{B}exa mappa X{/B}' per vedere la parte con la lettera corrispondente.
+P.es: usa '{B}exa mappa A{/B}' per vedere il livello dei piani alti.
+

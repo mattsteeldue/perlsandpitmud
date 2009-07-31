@@ -1,0 +1,2 @@
+Uso: unload <modulo>
+Scarica dalla memoria il modulo specificato. Il modulo va specificato indicando il path completo ma senza l'estensione .pl; una volta scaricato il modulo verrà ricaricato in memoria immediatamente.

@@ -1,0 +1,6 @@
+Uso: users [all|logon] [filtro]
+Presenta a video l'elenco degli utenti attualmente collegati.
+Per gli amministratori è possibile speficiare dei parametri:
+- logon per vedere i timestamp di ultimo logon
+- all   per vedere la lista completa
+Inoltre è possibile specificare un filtro di ricerca per accorciare l'output.

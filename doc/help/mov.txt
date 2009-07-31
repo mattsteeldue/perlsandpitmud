@@ -1,0 +1,5 @@
+Per muoversi nel Mondo Emerso si usano i comandi di direzione: {B}nord{/B}, {B}sud{/B}, {B}est{/B}, {B}ovest{/B}, {B}alto{/B}, {B}basso{/B}. Vanno bene anche le iniziali dei comandi ed esistono anche direzioni oblique {B}nordovest{/B}, {B}nordest{/B}, {B}sudovest{/B}, {B}sudest{/B}, abbreviate rispettivamente in {B}nw{/B}, {B}ne{/B}, {B}sw{/B}, {B}se{/B}. 
+In ogni stanza o ambiente ove ti trovi, vengono mostrate solo le uscite evidenti. E` possibile avere anche delle uscite speciali identificate da un nome particolare. Alcune uscite appaiono solo dopo una precisa ricerca. 
+Normalmente, per tornare sui tuoi passi puoi usare il comando '{B}back{/B}'. 
+E` possibile muoversi in gruppo, cioè un leader sceglie la strada e gli altri automaticamente lo seguono: si vedano i comandi {B}party{/B} e {B}follow{/B}. 
+Infine, per i nuovi arrivati, il comando '{B}terrazza{/B}' consente di essere teletrasportati alla Terrazza iniziale.

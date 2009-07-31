@@ -1,0 +1,3 @@
+Uso: give <oggetto> [numero]
+Per dare un oggetto che possiedi a qualcuno vicino a te nella stanza dove sei. Quando hai più oggetti con lo stesso nome il comando si riferisce al primo disponibile, i successivi vanno identificati aggiungendo un numero progressivo.
+Vedi anche: examine, drop, get

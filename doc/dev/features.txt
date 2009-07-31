@@ -1,0 +1,31 @@
+Caratteristiche del MUD
+-----------------------
+
+- Possibilità di caratterizzare i personaggi sulla base della razza e della Terra di origine.
+- Griglia di 62 x 50 luoghi, che riproduce sul terreno la mappa del Mondo Emerso.
+- Ambientazione iniziale nella torre di Salazar.
+- Possibilità per ciascuno di aggiungere brevi dettagli ai vari ambienti, visibili solo agli utenti di livello uguale o superiore a chi scrive; comunque non ammesse i talune particolari stanze.
+- Sistema di attacco peculiare che tiene conto della distanza dell'avversario, dell'arma o dell'eventuale cavalcatura di drago.
+- Grande varietà di "emote" per poter interagire con gli altri personaggi in modo divertente e particolare.
+- Documentazione (help) on-line
+- Abbiamo aperto l'ufficio postale, con possibilità di inviare e ricevere messaggi.
+- Possibilità di comunicare su canali (chat-line).
+
+
+Ambientazione iniziale nella torre di Salazar.
+
+Possibilità di caratterizzare i personaggi in base alla razza e alla terra di origine
+
+Griglia di stanze 62x50 che riproduce sul terreno la mappa del Mondo Emerso.
+
+Possibilità per gli utenti di aggiungere caratteristiche e dettagli alle stanze (visibili solo agli utenti di livello superiore allo scrivente; comunque non ammesse in stanze particolari)
+
+Sistema di attacco peculiare, che tiene conto della distanza dall'avversario, dall'arma o dall'eventuale cavalcatura di drago.
+
+Grande varietà di "emote" per poter interagire con gli altri personaggi in modo divertente e particolare.
+
+Documentazione in linea.
+
+Possibilità di inviare messaggi ad altri utenti
+
+Possibilità di comunicare sui canali di chat.

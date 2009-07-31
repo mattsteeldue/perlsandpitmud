@@ -1,0 +1,3 @@
+Uso: parla <testo del messaggio>
+Comunica con i personaggi nella tua medesima stanza.
+Un apostrofo (') all'inizio della linea, equivale a "parla ", cioè non serve lo spazio dopo il comando ma il testo del messaggio viene preso immediatamente.

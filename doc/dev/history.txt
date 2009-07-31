@@ -1,0 +1,160 @@
+2009-02-28: Cambiato nome da SALAZAR a TerraDelVento
+2009-01-24: Ristrutturazione torre di Salazar
+2008-11-02: Introduzione di SQLite
+2008-10-18: Abbandonato client di PerlMud
+2008-09-23: Prove con Oracle via sqlplus
+2008-09-18: Prove con PerlMUD scaricato da internet.
+2008-09-18: Miglioramento di Archive che sopprime il vecchio ArcData.
+2008-08-15: Gestione della fine del combattimento.
+2008-08-11: Introduzione di un oggetto "combat in progress"
+2008-08-08: Miglioria della classe di arma e armatura
+2008-08-03: Introduzione comando "wield" (impugna)
+2008-07-09: Introduzione sperimentale di CSV
+2008-06-30: Idea di sviluppare un semplice editor da linea di comando
+2008-06-21: Introduzione sperimentale di un'interfaccia a MySQL
+2008-06-04: Ripresa del combat_daemon
+2008-06-03: Ristrutturato mail_daemon rispetto al comando _mail.
+2008-05-30: Revisione di tutto l'help.
+2008-05-25: Ristrutturato channel_daemon e room_desc_daemon
+2008-05-16: Iniziamo ad usare Perl IDE
+2008-05-07: Ristrutturato stock_daemon
+2008-05-06: Introduzione modulo AnyData (rinominato ArcData)
+2008-03-24: Migliorato uso hostent.
+2008-03-08: Cambiato nome da CDME a SALAZAR.
+2008-03-04: Fissato register-unregister.
+2008-02-07: Wrap strin con escape ANSI
+2008-02-02: Introduzione oggetti permanenti
+2008-01-30: Miglioramento VirtualRoom, direzioni non standard
+2008-01-01: deathbook
+2007-12-29: Sicurezza masked keywords
+2007-12-27: Sicurezza su archivi file-db
+2007-12-21: Query su file-db
+2007-12-14: Gestione archive-level
+2007-12-10: Filtro malintenzionati con file anfame.txt
+2007-11-26: Introduzione dei libri
+2007-11-20: Introduzione level daemon
+2007-11-04: Completamento help on-line
+2007-10-07: Definizione combat-daemon
+2007-09-14: Foglio excel di documentazione
+2007-08-29: Aggiunto patch_daemon
+2007-08-23: Aggiunto commesso per negozio.
+2007-08-02: Aggiunto il back-shop per emporio e general-store
+2007-07-04: Stock daemon per gestire il mercato.
+2007-06-23: Miglioramento comandi standard
+2007-06-21: Nuova fun std_msg
+2007-06-19: Rivisitazione topografia città di Salazar.
+2007-06-15: Comando weather
+2007-06-14: Comando "follow".
+2007-06-13: Fissata gestione dei "clonable" object al restart
+2007-05-11: Stabilizzazione versione
+2007-04-01: Miglioramento dei comandi goto e examine
+2007-03-25: Comando "attack"
+2007-03-20: Miglioramento gestione linkdead
+2007-03-19: Aggiunto comando "disconnect"
+2007-03-01: Estesa la gestione degli emote con avverbi e parti del corpo
+2007-02-23: Gestione del driver: messaggio "driver already running".
+2007-02-20: Miglioramenti alla griglia
+2007-02-18: Ristrutturata la mappa di Salazar
+2007-02-16: Fissata gestione oggetti "unique"
+2007-02-14: Revisione mailer e stanza di startup
+2007-02-11: Aggiunta dei colori nei "channel"
+2007-02-08: Gestione del "buio" e dei "clone" sulle VirtualRoom.
+2007-01-30: Gestione tempo metereologico.
+2007-01-15; Aggiunte mappe sulla terrazza di Salazar.
+2007-01-12: Gestione dei canali di chat
+2007-01-11: Aggiunta dell'orto centrale di Salazar e il vecchio Baar.
+2007-01-08: Possibilità di non usare i file temporanei.
+2007-01-06: Database per gli utenti su file.
+2006-12-28: Possibilità per un utente di aggiungere annotazioni ad una stanza.
+2006-12-03: Introduzione del "dinar"
+2006-12-01: Comando "users"
+2006-11-28: Miglioramento e-mail interna.
+2006-11-28: Canali di chat interni
+2006-11-25: Gestione proprietà teporanee
+2006-10-31: Gestione dell'attacco
+2006-10-25: Gestione "callout".
+2006-10-20: Comando "attack", gestione del sistema di attacco.
+2006-10-13: Messaggistica di errore di compilazione
+2006-10-10: Possibilità di "force" dei mobile.
+2006-10-08: Possibilità di "snoop" dei mobile.
+2006-10-07: Spostamento dei comandi standard sotto cmd/norm
+2006-10-05: Gestione della mail
+2006-09-30: Ufficio postale
+2006-09-28: Rinnovo della funzione store-restore object
+2006-09-27: Nuova decodifica "emotes".
+2006-09-26: Comando "mail".
+2006-09-24: Inizio codifica PostOffice.
+2006-09-22: Introduzione delle "constants" configurabili da file.
+2006-09-21: Revisione di tutti gli help.
+2006-09-17: Aggiunta di "properies" sulle stanze virtuali.
+2006-09-14: Il comando "look" ora funziona anche sulla griglia.
+2006-09-10: Miglioria a move_object
+2006-09-08: Gestione della luce tra gli oggetti e degli ingombri nella stanza
+2006-09-07: Ristrutturazione della documentazione. Miglioramento di "look"
+2006-09-06: Aggiunta controllo sulla quantità di caratteri digitati in input.
+2006-09-04: Messaggistica
+2006-09-03: Comando "alias"
+2006-08-30: Funzionalità "input_to". Comando "passwd". Classe Weapon, Exit
+2006-08-29: Aggiunta di una griglia per il Mondo Sommerso.
+2006-08-28: Standa di "startup" reso parametrico rispetto ai file di configurazione
+2006-08-25: Comando "inventory"
+2006-08-24: Aggiunta delle "emotes"
+2006-08-23: Blocco opcode
+2006-08-22: Ristrutturazione del Mudlib in Mudcore.
+2006-07-24: Nuovo sistema di attacco (attack)
+2006-07-07: Prima definizione della griglia 50x62.
+2006-07-04: Codifica di tutti i toponimi della mappa originale del Mondo Emerso.
+2006-07-03: Prima versione stabile della griglia
+2006-07-02: Introduzione del file di "griglia".
+2006-06-30: Introduzione di una classe VirtualRoom discendente di Room.
+2006-06-29: Inizio creazione stanze virtuali (griglia)
+2006-06-28: Migliorie a startup
+2006-06-25: Suddivisione delle directory di salazar in room, obj, mon.
+2006-06-21: Aggiunta della scelta della razza.
+2006-06-17: Aggiunta della scelta di genere maschile e femminile del personaggio
+2006-06-12: Ristrutturazione della stanza di "startup".
+2006-06-10: Comando give. Ingrandimento della torre di Salazar.
+2006-06-09: Trasformazione dei .pm in .pl con aggiunta di testata automaticamente.
+2006-06-08: Esperimento per spostare tutti i comandi standard nel modulo Actions.
+2006-05-29: Aggiunta di oggetto skull in terrazza. Nuovo comando update.
+2006-05-28: Costruzione della prima torre di Salazar. Nuovi comandi actions, kill. Inizio a definire gli emotes.
+2006-04-09: Nuovo comando clone. Nuove classi Book, Garment, Key
+2006-04-08: Cambio di nome da "Lordly" a "Cdme", Cronache del Mondo Emerso. Uso di hash su disco per le password.
+2006-03-19: Nuova stanza di "startup".
+2006-02-11: Nuova directory home.
+2006-02-02: Scissione di Player in Living e User.
+2005-08-24: Stesura manuale technical.txt che riassume lo stato dell'arte.
+2005-06-25: Dopo iato di 16 mesi (!) riprese le fila di tutto il codice.
+2004-02-05: Aggiunto comando who.
+2004-01-30: Spostata l'area sotto la directory "mattsteel", aggiunta stanze alley_north, building. Migliorato goto.
+2004-01-28: Aggiunto comando zap, stanza cross_north
+2004-01-28: Aggiunta stanza mill.
+2004-01-26: Aggiunta stanza aviary.
+2004-01-25: Raccolto nel modulo Actions alcuni comandi standard.
+2004-01-19: Migliorato comando look.
+2004-01-17: Aggiunto comando unload.
+2004-01-12: Migliorato comando save.
+2004-01-08: Aggiunto comando set. Migliorati expel (era demote), shout e tell.
+2004-01-05: Aggiunta "north_tower".
+2003-12-31: Nuova stanza "out_north" collegata a "north_door". 
+2003-12-30: Tracciamo in un log chi si connette (logon). Aggiunto log di "compilazione".
+2003-12-29: Nuovi comandi: teleport, test.
+2003-12-24: Provo a popolare di vari utenti il mud: toni, ted, rod, mat...
+2003-12-22: Documentazione in linea per wizard (wizhelp). Abbandonato oggetto Logon.
+2003-12-21: Suddivisione netta tra comandi "std" e comandi "wiz".
+2003-12-16: Nuove directory dei file di configurazione e dei log del driver.
+2003-12-14: Miglioramento comandi look, say, save.
+2003-12-12: Pulizia. Aggiunto log delle cose da fare.
+2003-12-11: Aggiunto log su file del mud-driver. Comando demote.
+2003-12-10: Ripescato vecchio "realm" LPC con l'intenzione di convertirlo in Perl.
+2003-12-08: Comando goto, show. Inizo dell'area: north_door. Inizio manuale.
+2003-12-05: Migliora la catena di ricerca dei comandi.
+2003-12-04: Comando look. Stanza "the_chaos". Si viaggia tra le stanze
+2003-12-03: Inizio a definire la directory "area": Prima stanza "the_void".
+2003-12-02: Struttura delle directory. Aggiunto oggetto Room.
+2003-11-30: Il driver diventa un "modulo perl". Inizia la gerarchia di oggetti: Object, Player.
+2003-11-28: Utilizzo del file di configurazione. Aggiunta la "mappa" di benvenuto, help in linea, comandi say, shout, tell. Comincia a prender forma la "mudlib".
+2003-10-10: Deciso il nome del MUD: "Lordly".
+2003-10-09: Primi comandi disponibili, shutdown, save, quit, trace, hello!
+2003-09-25: Primo abbozzo/esperimento di mud-driver scritto in perl.
+

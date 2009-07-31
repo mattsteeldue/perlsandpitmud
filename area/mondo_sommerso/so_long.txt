@@ -1,0 +1,4 @@
+1=Esempio
+A=Salazar - Porta principale
+B=seconda
+C=terza

@@ -1,0 +1,24 @@
+
+Attack
+------
+
+1. Corpo a corpo
+
+1.1 Verifica per colpire.
+    rand(1) > weapon_skill / (weapon_skill + agility)
+
+1.2. Quantità di danno
+    strength/2 + random( strength ) + weapon - resistance - armour
+  
+
+2. Da distante
+
+2.1. Verifica per colpire
+    rand(20) > 20 - ballistic_skill 
+    rand(1) > 1 - ballistic_skill/20
+
+2.2. Quantità di danno
+    weapon/2 + random( weapon ) - resistance - armour
+
+
+    

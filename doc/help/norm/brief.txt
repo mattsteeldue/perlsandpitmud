@@ -1,0 +1,6 @@
+Uso: brief [desc|short|note|combat]
+Stabilisce il grado di dettaglio delle descrizioni, delle descrizioni brevi, delle anntoazioni.
+{B}brief desc{/B}   per la descrizione delle stanze.
+{B}brief short{/B}  per la descrizione degli oggetti
+{B}brief note{/B}   per la visualizzazione delle "annotazioni". 
+{B}brief combat{/B} per la visualizzazione dei combattimenti.

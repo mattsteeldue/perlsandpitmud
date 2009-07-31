@@ -1,0 +1,120 @@
+Questo è il gestore della "Domanda e Offerta". Ogni casa viene rappresentata dal punto di vista del giocatore.
+Il prezzo da usare nelle transazioni dato moltiplicando il "valore" per un fattore. Scegliamo di mantenere traccia del fattore come in un listino di borsa.
+Questo ci permette anche di tener buono il vecchio concetto di "valore" di un oggetto.
+
+Ovviamente, il "valore" è un valore standard: la regola di dividere per due quando viene venduto da un giocatore viene applicata dopo la determinazione del fattore
+
+Il "listino" viene mantenuto in un "hash" di "array" che poi viene scritto su disco in qualche modo.
+
+-- Acquisto
+Ogni negozio, bar, osteria dovrebbe segnalare al "listino" tutte le vendite (gli acquisti dei giocatori): questo sposta leggermente verso l'alto il "fattore". Il prezzo è sempre arrotondato all'intero e l'effetto si manifesta dopo qualche contrattazione.
+
+-- Vendita
+Ogni negozio dovrebbe segnalare al "listino" gli acquisti che fa, (le vendite dei giocatori): questo sposta leggermente verso il basso il "fattore". Anche in questo caso l'effetto si manifesta dopo qualche contrattazione.
+
+-- Input-output interindustriale
+Ogni produttore richiede delle materie prime. Tale produttore dovrebbe segnalare il numero di materie prime che consuma per produrre il bene finale. Per determinare il valore del bene in vendita, dovrebbe sommare il valore corrente di ciascuna delle sue materie prime.
+
+-- Cosa succede
+Ad ogni *reset* il listino viene ricalcolato in massa: 
+L'offerta media viene aggiornata aggiungendo l'offerta dall'ultimo *reset*.
+La domanda media viene aggiornata aggiungendo la domanda dall'ultimo *reset*.
+La quantità venduta durante l'ultimo periodo sposterà lievemente la quantità media usata nelle formule verso l'alto o verso il basso in base al fatto che la quantità venduta è aumentata o diminuita rispetto alla media del periodo precedente.
+La quantità acquistata durante l'ultimo periodo sposterà lievemente la quantità media usata nelle formule verso l'alto o verso i basso in base al fatto che la quantità venduta è aumentata o diminuita rispetto alla media del periodo precedente.
+
+-- Il listino
+Per ogni "bene" del listino vengono mantenute le seguenti informazioni:
+- mdemand: Domanda media dell'economia D[t]
+- msupply: Offerta media dell'economia S[t]
+- pfactor Fattore del prezzo, utilizzato per il calcolo del prezzo effettivo
+- epsilon: elasticità del prezzo (vedi la parte di Economia I)
+
+Le formule usate sono:
+pfactor[i] *= 1.0 + (1.0 / (mdemand[i] * epsilon[i]))  quando il giocatore compra
+pfactor[i] *= 1.0 - (1.0 / (msupply[i] * epsilon[i]))  quando il giocatore vende
+
+Comunque il prezzo deve rimanere entro dei limiti basso-alto, per esempio forzando un condizione come la seguente:
+pi[0]/2 <= pi[t] <= 2*pi[0] 
+in modo che pi[t] (pfactor) rimanga tra 0.5 e 2.
+Questo per evitare che i prezzi diventino assurdamente alti o bassi.
+
+In this daemon, pfactor is updated each time a player buyes or sells any
+item: an item is added to the list as soon as it is bought or sold
+
+At reset, for each item listed, if someone bought or sold such an item
+then we can recompute the mean-demand (mdemand) and mean-supply (msupply)
+so the behaviour of the subsequent buy and sell will change slightly.
+
+In this case we use a "weighted-mean" between the current mean demand
+or supply and current level of demand/supply.
+There is another feature: if demand/supply is too low then the price 
+will go down/high (like a dealer would do).
+
+Any room that handles with price/values should ask the current price
+calling STOCKD->query_price(ob);
+or
+calling STOCKD->query_price_key(key);
+
+
+---- Economics ----
+
+Let us introduce the minimum "Economics" background ;-) 
+
+We define "elasticity" of the quantity X with respect to price P of a
+good the ratio between the percentage variations of X and P, i.e.
+
+     E = (deltaX / X) / (deltaP / P)
+
+that can be written
+
+     E = (deltaX / deltaP) * ( P / X)
+
+The "elasticity" is the "friction" in change of price with respect to 
+quantity. The higher abs(E) is, the slower is the change. It should be greater
+than 1 since, for our purpose, numbers less than 1 makes the price 
+too reactive to quantity. So we can obtain deltaP
+
+     deltaP = deltaX * P / ( X * E )
+
+This can be used to describe the behaviour of the price P in base of
+the behaviour of X and E. 
+
+In general we can assume E as a constant for each good.
+
+Let us define
+
+  P[0]    Initial price, i.e. the old-standard item->value() 
+  P[t]    The current value of sold/bought item.
+  E       Elasticity of quantity sold/bought of item with respect to cost
+          For supply and demand we use the same expression of elasticity.
+
+Consider the Demand as everything players buy from the shop/pub
+
+  D[t]    Demand of an item since last reset (here we use D in place of X)
+   
+if  D[t] > 0  then we can compute deltaP and the new price P[t+1]: 
+
+  deltaD[t] := D[t+1] - D[t]
+  deltaP[t] := P[t] / ( D[t] * E ) * deltaD
+  P[t+1]    := P[t] + deltaP
+
+Now, consider the Supply as everything players sell to the shop.
+
+  S[t]    Supply of an item since last reset (here we use S in place of X)
+
+if  S[t] > 0  then we can compute deltaP and the new price P[t+1]: 
+
+  deltaS[t] := S[t+1] - D[t]
+  deltaP[t] := P[t] / ( D[t] * E ) * deltaS
+  P[t+1]    := P[t] + deltaP
+
+As we said before, we store the factor "pi" that multiplied by the P[0] 
+gives the price, i.e. 
+
+  P[t] = pi[t] * P[0]
+
+**** keep track of bumps 
+**** The no-trade signal is under development.
+**** Store arrays in MySql
+**** develop a function that calcs the price of shop's output set_value()
+**** without scratching every "std_price".

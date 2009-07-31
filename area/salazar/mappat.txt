@@ -1,0 +1,15 @@
+
+           ** {B}Attico{/B} **
+                             
+                             
+              o o o          
+         T  o       o        
+           o         o       
+           o         o H     
+           o         o       
+            o       o        
+              o o o          
+            P                
+                             
+T : Templo                   
+H : Infermeria        P : Planetario

@@ -1,0 +1,2 @@
+Uso: clone <filename> [silenzioso]
+Crea un oggetto o un mob a partire dal <filename> indicato. Il filename deve individuare un file comprensivo di path. L'oggetto appena clonato viene messo nel tuo inventario, ma un mostro viene mosso nella stanza in cui ti trovi.

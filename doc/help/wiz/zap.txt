@@ -1,0 +1,2 @@
+Uso: zap <oggetto> [numero]
+Distrugge l'oggetto o mob specificato che viene rimosso completamente. Nel caso esistano numerosi oggetti con lo stesso nome, il numero consente di distinguere quale dev'essere rimosso. Per evitare ambiguità è opportuno utilizzare il nome completo di numero seriale. Non è possibile zappare gli utenti.

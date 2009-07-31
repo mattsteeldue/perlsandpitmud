@@ -1,0 +1,2 @@
+Uso: restore [username]
+Rilegge il file di configuarazione di un certo utente (default te stesso)

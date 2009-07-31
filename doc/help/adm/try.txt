@@ -1,0 +1,5 @@
+Uso: try <comandi perl>
+Tenta di eseguire come espressione i comandi libreria o i comandi perl specificati.
+Esempio: try myself()->cap_name()
+Esempio: try 12+3
+ 

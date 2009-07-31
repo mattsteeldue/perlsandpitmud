@@ -1,0 +1,16 @@
+Uso: show [recursive] <object> | clones|exits|actions | objects|all|living master...
+Mostra alcune informazioni della stanza dove ti trovi.
+ all       - mostra tutti gli oggetti registrati (oggetti, stanze, mob, utenti...)
+ driver    - mostra gli elementi del driver 
+ env       - mostra gli oggetti nella stanza
+ act       - mostra i verbi disponibili nella stanza
+ living    - mostra i mob e i personaggi
+ emote     - mostra i verbi associati alle 'emotes'
+ exit      - mostra le stanze adiacenti accessibili
+ clone     - mostra gli oggetti clonati ad ogni 'restart'
+ detail    - mostra i dettagli della stanza
+ prop      - mostra le proprietà
+ conn      - mostra le connessioni
+ recursive - effettua una ricorsione durante la ricerca ***
+ <nome>    - mostra i dettagli di un oggetto, utente o mob.
+ 

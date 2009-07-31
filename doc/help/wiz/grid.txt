@@ -1,0 +1,6 @@
+Uso: grid <x> <y> <z> <grid>
+Muove l'utente verso il luogo indicato in modo analogo a "goto".
+La destinazione viene espressa in coordinate e nome della griglia.
+Una coordinata negativa viene intesa come il "quadrato" 4x4.
+
+ 

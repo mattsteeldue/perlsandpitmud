@@ -1,0 +1,3 @@
+Uso: cd [{directory}]
+Cambia la directory di lavoro. Senza parametro cambia alla propria "home".
+Vedi anche {B}ls{/B}, {B}pwd{/B}.

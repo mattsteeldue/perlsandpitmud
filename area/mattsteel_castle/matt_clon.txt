@@ -1,0 +1,6 @@
+#
+# em_clon.txt
+# Clones per la griglia della valley
+
+Ab = ([area/valley/obj/skull])
+

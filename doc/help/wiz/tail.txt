@@ -1,0 +1,2 @@
+Uso: tail <filename> [num]
+Mostra le ultime n righe di un file.

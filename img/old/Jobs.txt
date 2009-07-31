@@ -1,0 +1,12 @@
+Cavaliere di drago
+Armaiolo
+Mago
+Sacerdote
+Consigliere (i-7)
+Pescatore
+Contadino
+Ortolano
+Scudiero
+Erborista
+Ladro
+Vivandiere

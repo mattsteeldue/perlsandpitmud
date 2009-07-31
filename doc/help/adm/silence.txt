@@ -1,0 +1,2 @@
+Uso: silence <username>
+Impedisce ad un utente di usare "shout". Per sbloccarlo devi ridare silence <username>.

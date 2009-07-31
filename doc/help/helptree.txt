@@ -1,0 +1,26 @@
+
+com
+    annota, channel, di, tell, mail, parla, say, urla, shout
+combat
+    attacca, attack, fuggi, flee, indossa, wear, lontano, far, 
+    togli, remove, vicino, near
+emote
+mondo
+    aiuto, help, alias - unalias, ansi, brief, color, 
+    fine, quit, kal, look, news, passwd, prompt, 
+    salva, save, score, time, users, wrap
+mov
+    n,s,e,w, nw,sw,ne,se, terrazza 
+obj
+    dai, give, esamina, examine, i, inventory, 
+    lascia, drop, party, prendi, get, segui, follow
+razze
+    Umani, Mezzelfi, Folletti, Ninfe, Gnomi, Draghi, Sirenidi, Fammin
+shop
+    lista, list, compra, buy, vendi, sell, valuta, value
+terre
+    vento, acqua, mare, sole, giorni, notte, fuoco, rocce, 
+    grande, zanelia
+
+wizards
+    dummy, hello, return

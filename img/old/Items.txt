@@ -1,0 +1,7 @@
+        Dinar: unità di conto
+        Carte
+        Lacrima
+        Cristallo Nero
+        Pergamena
+        Foglie per medicina
+        

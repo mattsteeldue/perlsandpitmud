@@ -1,0 +1,115 @@
+void shutdown()
+string query_host_name()
+string query_ip_number( void | object player )
+string query_ip_name( void | object player | string address )
+string query_load_average() -> 0.68 cmds/s 29.40 comp lines/(s
+
+
+void enable_command(void)
+void disable_command(void)
+void input_to( string func [,1] )
+void add_action( string func, string verb [, 1] )
+void move_object( object dest | string destfilename )
+int transfer( object item, object sdest )
+void notify_fail( string message )
+void say( string str [, object ob ] )
+void shout( string )
+void tell_object( object liveob, string message )  --> socket or catch_tell.
+void tell_room( object ob, string str )
+
+void set_heart_beat( int onoff )
+void set_living_name( string name )
+void set_this_player( object liveob )
+int set_light( int n )
+object shadow( object shadowee, int setshadow )
+object snoop( void | object snooper, object snopee )
+
+
+object this_interactive()
+object this_object()
+object this_player()
+
+int interactive( object ob ) --> 0|1
+int living( object ob )
+object present( object ob | string ob, object* where | object where )
+object query_snoop( object snopee )
+string query_verb()
+
+int command( string command )
+string* get_localcmd( object ob )
+    set_living_name
+    force_player
+    ok_to_force
+int query_idle(object player)
+
+string process_string( string combinestring ) # substitution with " &{func} "
+mixed process_value( string calldescription )
+int parse_command( string command, object env|object* oblist, string pattern, mixed arg, ... )      -- !!!
+printf( string fmt, ... ) !!!
+string sprintf( string fmt, ... ) !!!
+
+
+object find_living(string name)
+object find_object( string path_name ) -- /std/coins#123
+object find_player( string name )
+object previous_object( ) -- #via call_other
+int object_time( object ob )
+
+
+mixed call_other( object ob | string ob, string func, ... )
+string function_exists( string func [, object ob ] ) -->  /std/living
+string* inherit_list( object ob )
+    find_object
+
+
+object  environment( [ object ob ] )
+object*  all_inventory( [ object ob ] )
+object* deep_inventory( object ob )
+object first_inventory( object ob )
+object next_inventory( object ob )
+    inventory
+
+int restore_object( string filename )  --> config
+    save_object(
+
+
+void call_out( string func, int delay, void | mixed args )
+int find_call_out( string func )
+in remove_call_out( string funcname )
+    
+int cat( string file, void | int startl, void | int numl )
+void log_file( string file, string message )
+
+catch(expr) # eval
+
+object clone_object( string path )
+void destruct(object ob)
+    remove
+    
+    
+string create_wizard(string name)
+string creator( object ob )
+
+string crypt( string data, string key | int random )
+
+int exec(object new, object old)
+int export_uid( object receiveob )
+
+string filename(object ob)
+
+mixed * filter( int foobar | mixed* arr | mapping map, string fileter, object ob | string ob, void|mixed extra)
+pointerp filter_objects(pointerp arr, string fun, object ob)
+
+ind_objects( string identity )
+
+intp( mixed testvar )
+mappingp( mixed testvar )
+objectp( mixed testvar )
+pointerp( mixed testvar )
+stringp( mixed testvar )
+
+string getuid( object ob )
+string geteuid( object ob )
+int seteuid( string userid, int zero )
+void setuid()
+

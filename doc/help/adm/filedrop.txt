@@ -1,0 +1,2 @@
+Uso: filedrop <file>
+Elimina un file.

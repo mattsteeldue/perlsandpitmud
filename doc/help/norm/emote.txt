@@ -1,0 +1,6 @@
+Quando viene dato il comando '{B}emote <xxx>{/B}' viene visualizzato il messaggio caratteristico di questa specifica 'emote'.
+La maggior parte delle "emote" ammette un destinatario usando il comando '{B}emote xxx nome{/B}' e si fa di 'nome' il destinatario della emote 'xxx'. 
+In alcuni casi è possibile specificare un avverbio di seguito al nome per modificare l'effetto finale. 
+In ogni caso, ogni "emote" può essere data anche senza specificare il comando '{B}emote{/B}' stesso, ma direttamente con il comando 'xxx nome'.
+Il comando '{B}emote{/B}' da solo presenta a video la lista delle "emote" e ognuna delle parole elencate rappresenta un comando "emote".
+Vedi anche: {B}help avverbi{/B} per ottenere l'elenco dei 700 avverbi disponibili.

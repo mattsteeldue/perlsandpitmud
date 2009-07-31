@@ -1,0 +1,3 @@
+Uso: level <mobname> <level>
+Effettua il setup di un oggetto al livello <level>
+Vedi anche: advance

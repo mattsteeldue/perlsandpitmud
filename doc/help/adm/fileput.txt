@@ -1,0 +1,7 @@
+Uso: fileput <filename> 
+Va in append su un file attingendo l'input dal terminale. 
+Termina il file la sequenza '***' o per timeout.
+E' un metodo rapido per aggiornare un file tramite il terminale in tre passi:
+1. Dare il comando 'fileput <filename>': il sistema entra in attesa di righe di testo
+2. Incollare in un sol colpo tutto il file sul terminale
+3. Dare invio dopo qualche secondo o concludere il file con '***'

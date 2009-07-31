@@ -1,0 +1,6 @@
+actions     advance     disconnect  dummy     
+echo        expel       forcesnoop  freeze    
+help        level       reconfig    peace     
+permanent   restore     set         show      
+shutdown    silence     snoop       switch    
+temporary   try         users     

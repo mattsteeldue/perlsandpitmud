@@ -1,0 +1,3 @@
+Uso: pwd
+Mostra l'attuale directory di lavoro.
+Vedi anche {B}cd{/B}, {B}ls{/B}.

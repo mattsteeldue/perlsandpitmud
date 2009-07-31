@@ -1,0 +1,2 @@
+Uso: uptime
+Mostra informazioni sull'esecuzione del driver.

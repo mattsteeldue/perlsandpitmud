@@ -1,0 +1,6 @@
+--- Area Virtuale ---
+  è possibile costruire una griglia di stanze o luoghi senza dover programmare in modo specifico tutte le stanze. Nella griglia ciascuna stanza è identificata su di una mappa da una coppia di coordinate (coordinata x in orizzontale, y in verticale); essa si basa su un gruppo di file di definizione e configurazione ccc_grid.txt, ccc_prop.txt, ccc_short.txt, ccc_long.txt, dove "ccc" è una sigla che identifica la mappa stessa; in questo modo è possibile definire numerose mappe.
+  Nel file ccc_grid.txt, la "larghezza logica" della mappa è data dalla lunghezza della prima riga utile (diviso 2 e meno 2), per il fatto che ogni "cella" è definita da una coppia di caratteri. L' "altezza" logica è espressa dal numero di righe utili. 
+  Nel nostro caso, la mappa del Mondo Emerso è stata definita in un file "em_grid.txt" suddiviso in una griglia 62 x 50. Le definizioni delle coppie di caratteri sono codificate nei file em_short.txt e em_long.txt
+  In particolare, i codici che iniziano con "0" sono "speciali" e non "accedibili" e le celle adiacenti ne danno notizia tramite una dicitura standard "nelle vicinanze: ovest, Fiume Saar..."
+  La prima colonna non fa parte della mappa e può essere usata come righello. Anche l'ultima colonna non fa parte della mappa.

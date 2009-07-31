@@ -1,0 +1,16 @@
+
+                        acqua       aiuto       alias
+annota      ansi        back        brief       channel
+color       com         combat      dai         di
+draghi      drop        emote       esamina     exa
+examine     fammin      fine        folletti    fuoco
+g           get         giorni      give        gnomi
+grande      guarda      help        helptree    i
+inventory   kal         l           lascia      look
+mail        mare        mezzelfi    mondo       mov
+news        ninfe       notte       obj         parla
+passwd      prendi      prompt      quit        razze
+rocce       salva       save        say         shop
+shout       sirenidi    sole        tell        terre
+time        umani       unalias     urla        users
+vento       voci        wrap        zanelia     

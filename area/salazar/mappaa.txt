@@ -1,0 +1,15 @@
+
+         ** {B}Piani alti{/B} **
+                             
+            U                 
+              o o o          
+            o       o  R     
+           o         o       
+           o         o       
+           o         o       
+         B  o       o        
+              o o o          
+                    L        
+                             
+L : Libreria          U : Ufficio postale
+B : Birraio           R : Ristorante 

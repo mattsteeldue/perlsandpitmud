@@ -1,0 +1,331 @@
+Salazar
+-------
+
+
+Object Hierarchy.
+-----------------
+These objects are defined in 'std' subdirectory 
+
+Object
+  |\
+  | +-Room
+  |     +-BackShop
+  |     +-PostOffice
+  |     +-Shop
+  |     +-VirtualRoom
+  |\ 
+  | +-Daemon 
+  |   (actions channel combat death emote hazards level mail move_dir none patch room_desc stock time)
+  |\ 
+  | +-Living
+  |     +-Mobile 
+  |     +-User
+  |\ 
+  | +-Garment**
+  |     +-Helmet, Boots, Gloves, Armour, Shield, Cloak, Ring**, Amulet**, Earring**, Belt**
+  |\ 
+  | +-Weapon
+  |     +-Sword, Axe**, Whip**
+  |\ 
+  | +-Container **
+  |     +-Bag**, Rucksack**, Haversack**
+  |\ 
+  | +-Book **
+  |\ 
+  | +-Key **
+  |\ 
+  | +-Money
+   \ 
+    +-Exit **
+      +-Door **
+(** means "to be fixed")
+
+
+Configuration Set-up
+--------------------
+bin/muddrv.cfg              This is the master config-file, driver.pl wants this name as first param
+bin/setup/actions.cfg       All standard actions coded in std/Actions.pm
+bin/setup/adverbs.cfg       Adverb list
+bin/setup/constants.cfg     Constant values you can access via getsetup('xxx')
+bin/setup/emotes.cfg        All emote strings used by std/Actions.pm -> do_emote()
+bin/setup/messages.cfg      Anywhere you want a standard message you can use  driver()->{Message}->{YourTag}
+
+Database
+--------
+cfg/db/_annotations.txt           Room annotations file.
+cfg/db/_channels_subscribers.txt  Subscribers file      
+cfg/db/_channel_perl.txt
+cfg/db/_channel_rpg.txt
+cfg/db/_channel_tag.txt
+cfg/db/_channel_wiz.txt
+cfg/db/_driver_dbusers.txt        Users' database file.
+cfg/db/_standard_race_level.txt
+cfg/db/_stock_exchange.cfg        Stock-exchang price list
+cfg/db/passwords.cfg              Crypted password file.
+
+Preload room
+------------
+std/room/the_void.pl     Void room.
+std/room/daemon_room.pl  Room where all daemons are loaded in.
+std/room/startup.pl      Starting room: must have a startup() sub to handle starting setup.
+
+Daemons
+-------
+actions_daemon              Trial actions daemon
+channel_daemon              Sets up the "chat" channels
+combat_daemon               Provides combat capabilities.
+death_daemon                Death course
+emote_daemon                Provides do_emote
+hazards_daemon              
+level_daemon
+mail_daemon                 Collects "mail" command features.
+move_dir_daemon             Provides do_move_dir, do_look_room
+none_daemon
+patch_daemon                Provides do_patch: called at logon to patch any user.
+room_desc_daemon            Provides standard "look" interface
+stock_daemon                Provides stock-exchange price listing in any shop/store/inn.
+time_daemon                 Provides time, season, weather features.
+
+
+Fighting
+-----------
+
+
+
+Muddrv
+------
+
+-----------------------------------------------------------------------------
+new()
+    driver(.)
+    restore_config( configfile )
+    ->config()
+        restore_config( constants, messages )
+        ** driver_setup() 
+            restore_config( actions, emote, adverb, annotations )
+    restore_config( passwords )
+    ->init()
+        foreach room in PreloadedObjects
+            room->new()
+        Opcode::opmask_add(...)
+        ** driver_init() 
+
+-----------------------------------------------------------------------------
+destroy()
+    log_file()
+    driver_destroy() **
+    foreach client
+        client->close
+    store_config( passwords )
+        
+-----------------------------------------------------------------------------
+run()
+    while drv_is_alive
+        ->linkdead_test
+            foreach client in connections
+                quit_client(.) if linkdead or idletime
+        ->fulfil_callouts( curtime ) # for each expired pending callout,
+            foreach tt ( ->callouts ) 
+                current_user( that-player )
+                delete ->callouts->{ tt };
+                call_other( rest-params )
+        foreach client ready, 
+            alternatively calls...
+            ->socket_logon
+                new = ->listner->accept
+                current_user( User->new )
+                            Living->new
+                                Object->new
+                                    register_object
+                            unregister_object
+                cat( welcome )
+            ->socket_process( client ) 
+                pl = client_to_user( client ) || 0
+                sysread client
+                pl->input_number++
+                pl->input_line = $` pl->input_buf = $'
+                write_snoopees( $pl, $input_line )
+                pl->input_to() 
+                    alternatively:
+                        ** process_logon()   
+                        ** process_startup() 
+                        ** process_normal()  
+        ->heart_beat() # for each living-object (sets on current_user).
+            foreach object in driver->objects
+                current_user( object )
+                object->heart_beat( curtime )
+                on error showcomperr()
+        sleep
+                
+
+-----------------------------------------------------------------------------
+
+MudLib
+------            
+
+process_logon()  
+    alternatively:
+    process_username() 
+    process_passw()
+        process_enter()
+    process_passw2()
+        store_config()
+        process_enter()
+    process_kickout()
+        quit_client( other_client )
+        process_enter()
+
+process_startup()  
+    room = current_user()->environment()
+    room->startup( input_line )
+
+process_normal()  
+    robot_check()
+    alias-parser()
+    split( /|;/ , input_line )
+        force( input_line, pl ) # only Living can be forced
+            command, param = split( input_line )
+            do_command( command, param )            
+                1. call_other( cmd/adm/_command, cmd_command", param ) if admin
+                2. call_other( cmd/wiz/_command, cmd_command", param ) if wizard
+                   call_other( cmd/file/_command, cmd_command", param ) if wizard
+                3. foreach item in pl->inventory 
+                     call_other( item, item->actions->{ command }, command, param );
+                4. foreach item in pl->environment->inventory
+                     call_other( item, item->actions->{ command }, command, param );
+                5. call_other( room, room->actions->{ command }, command, param )
+                #6. call_other( user, user->actions->{ command }, command, param )
+                7. call_other( cmd/norm/_command, cmd_command", param )
+                8. call_other( 'std/Actions', driver->actions->{ command }, command, param )
+                9. call_other( cmd/ghost/_command, cmd_command", param )
+        notify_fail() unless ok.
+
+-----------------------------------------------------------------------------
+call_other( obj, cmd, @_ )                --> -1:not match with errors; 0:not match.
+    if  ref( obj )  
+        obj->command( param )
+    elsif  obj eq 'MudCore'     
+        command(param) 
+    else # !ref( obj )  
+        pkg = load_module( obj )         
+        pkg->new( param )
+        pkg->command( param )     
+        on error showcomperr
+
+
+-----------------------------------------------------------------------------
+load_module( $obj, $refresh )              
+    unload_module( $obj ) if $refresh       --> -1:compilation errors; 0:object not found.
+    include_file( $obj ".pl" )
+
+
+-----------------------------------------------------------------------------
+include_file( $file ) [private]
+    # do not reload a module if it is in memory
+    # find module directly or # search within @INC path # continues if found     
+    # virtual grid room
+    # read module and do # anti-virus alert
+    # write tmp module file # tmp module is numbered with this sequence. # build package name
+    # include tmp just written
+    # intercept errors.
+    
+
+    
+
+-----------------------------------------------------------------------------
+
+*** String Conversion Utility ***
+basename 
+basedirname 
+baseextname 
+basefilename
+basenavdir
+number_to_string
+parse_string
+time_to_str
+wipe_accent
+wipe_bs 
+wipe_crlf 
+wrap_array
+wrap_string         wrap_string_user
+wrap_string_user
+
+*** Mud-Core ***
+dbuser_erase        restore_config( dbusers.cfg )  store_config( dbusers.cfg )
+dbuser_get          restore_config( dbusers.cfg )
+dbuser_set          restore_config( dbusers.cfg )  store_config( dbusers.cfg )
+do_command          call_other
+force               do_command
+trans_object_out    remove_member_array
+trans_object_in
+load_module         unload_module   include_file
+include_file
+driver
+process_logon
+process_normal
+process_startup
+socket_logon
+socket_process
+unload_module
+
+*** Core ***
+driver_setup
+driver_destroy
+driver_init
+the_void
+call_out  
+call_other          load_module
+getsetup
+getcolor
+getdir
+remove_member_array
+member_array
+parse_alias
+parse_string
+std_msg
+
+
+*** I/O ***
+attack
+cat                 tell_object
+cat_str             -> str
+cat_wrap            tell_object
+log_file  
+notify_fail 
+say                 tell_object
+shout               tell_object
+tell_object         catch_tell
+tell_room           tell_object
+write_client
+write_debug 
+write_other
+write_parsed 
+write_snoopees
+
+*** Object Manipulation ***
+clone_object        clone_object( create_object )
+effective_object_name
+find_living         
+find_object
+find_user
+move_object         find_object, effective_object_name, trans_object_out, trans_object_in
+recursive_inventory (deep)
+register_object 
+restore_string 
+restore_config
+store_string 
+store_config
+transfer
+unregister_object 
+
+*** Users & Clients ***
+client_to_user 
+current_client 
+current_user
+quit_client 
+quit_all_clients
+save_user 
+save_all_users 
+username_to_client
+
+

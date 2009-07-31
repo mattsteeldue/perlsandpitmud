@@ -1,0 +1,2 @@
+Uso: guarda
+Comando base per ottenere la descrizione dell'ambiente dove ti trovi. Equivale a '{B}look{/B}'.

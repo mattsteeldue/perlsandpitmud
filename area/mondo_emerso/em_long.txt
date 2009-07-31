@@ -1,0 +1,14 @@
+#
+# em_long.txt
+# Descrizioni lunghe per la griglia del Mondo emerso.
+
+A[ = Sei di fronte alla porta occidentale lungo l'arco Ovest della torre di Salazar. Da qui puoi accedere all'interno della città.
+A] = Sei di fronte all'arcata orientale delle mura della torre di Salazar. Per accedere alla città devi aggirare la torre ed entrare dalla Porta Ovest.
+A* = Ti trovi fuori della città di Salazar. Stai percorrendo un sentiero adiacente il muro esposto a nord
+Ax = Ti trovi fuori della città di Salazar. Stai percorrendo un sentiero adiacente il muro esposto a sud
+At = Questo è il sentiero che parte da Salazar e si addentra nella foresta della Terra del Vento
+Au = Questo è il sentiero che parte da Salazar e, dirigendosi verso Sud, collega la città alla Foresta. L'erba della prateria è alta sia a destra che a sinistra
+Aw = Salazar
+Ay = Questa è la casa della maga Soana.
+Az = Salazar
+

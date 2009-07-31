@@ -1,0 +1,3 @@
+Uso: exa <oggetto> [numero]
+Per esaminare un oggetto disponibile. Quando ci sono più oggetti con lo stesso nome il comando esamina il primo disponibile, i successivi vanno identificati aggiungendo un numero progressivo
+Vedi anche: drop, get, give

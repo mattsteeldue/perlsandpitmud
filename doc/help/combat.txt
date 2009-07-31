@@ -1,0 +1,11 @@
+Ecco i comandi relativi al combattimento. 
+Il combattimento corpo a corpo inizia con '{B}attack{/B}'; altrimenti un combattimento può iniziare a distanza tramite un'arma da lunga distanza (arco, lancia, ecc). è possibile avvicinarsi o allontanarsi usando i comandi '{B}far{/B}' e '{B}near{/B}'. 
+Prima di combattere è opportuno riverstirsi di un armatura usando i comandi '{B}wear{/B}'; per togliere un pezzo si usa 'remove'.
+
+- {B}attacca{/B} - {B}attack{/B} - per iniziare un combattimento
+- {B}lontano{/B} - {B}far   {/B} - per allontanarsi 
+- {B}vicino {/B} - {B}near  {/B} - per avvicinarsi
+- {B}fuggi  {/B} - {B}flee  {/B} - per fuggire
+- {B}indossa{/B} - {B}wear  {/B} - per indossare un pezzo di armatura
+- {B}togli  {/B} - {B}remove{/B} - per togliere un pezzo di armatura
+- {B}poweron/poweroff{/B} - per mettere e togliere tutto

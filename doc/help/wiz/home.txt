@@ -1,0 +1,2 @@
+Uso: home
+Equivale a goto <workroom>

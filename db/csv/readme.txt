@@ -1,0 +1,1 @@
+-- Directory usata dal modulo Archive o dalla connessione CSV.

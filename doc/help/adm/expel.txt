@@ -1,0 +1,4 @@
+Uso: expel <username> [messaggio]
+Espelle definitivamente dal Mondo Emerso l'utente indicato. 
+Il nome <username> viene totalmente rimosso da tutti i file, come se non fosse mai esistito. E' eventualmente possibile inviare un messaggio all'utente per comunicar il motivo. Il messaggio gli verra' inviato solo se attualmente on-line. Non è possibile espellere te stesso o altri wizard. 
+E' un comando molto drastico e il suo utilizzo viene tracciato.

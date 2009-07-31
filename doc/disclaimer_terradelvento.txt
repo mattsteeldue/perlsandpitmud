@@ -1,0 +1,9 @@
+Sintesi delle Regole di questo MUD.
+
+La registrazione su questo MUD è gratuita! Ma è importante leggere attentamente le regole e le politiche illustrate qui sotto. Per poter completare la registrazione devi accettare le condizioni e per accettare devi rispondere {B}"s"{/B} alla domanda "{B}Accetti le regole di questo MUD? (s/n){/B}". Per interrompere il processo di registrazione, è sufficiente disconnettersi prima di confermare l'ultima domanda.
+
+Lo Staff di questo MUD cerca di mantenerlo per quanto possibile in ordine, tuttavia è materialmente impossibile controllare tutto e tutti. Questo significa che lo Staff non è responsabile del comportamento molesto o illecito tenuto dagli utenti in quanto i messaggi e le azioni di gioco esprimono solamente il punto di vista di chi agisce e di quello non dello Staff.
+
+Accettando le regole appena citate, dichiari esplicitamente che ti asterrai da linguaggio osceno, volgare, odioso o che infranga in qualsiasi modo le regole di buona convivenza. Lo Staff del MUD si riserva il diritto di bandire i trasgressori, temporaneamente o definitivamente.
+
+{B}Accetti le regole di questo MUD? (s/n){/B} 

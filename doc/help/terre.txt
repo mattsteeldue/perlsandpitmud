@@ -1,0 +1,7 @@
+Le terre si riferiscono alle otto forze elementari della Natura: Aria, Acqua, Mare, Sole, Giorno, Notte, Fuoco, Terra. A queste si aggiungono la "Grande Terra" e "Zanelia", il continente sottomarino. Puoi chiedere '{B}help <terra>{/B}' per una breve descrizione di ciascuna.
+
+{B}vento {/B} - Terra del Vento    {B}notte  {/B} - Terra della Notte
+{B}acqua {/B} - Terra dell'Acqua   {B}fuoco  {/B} - Terra del Fuoco  
+{B}mare  {/B} - Terra del Mare     {B}rocce  {/B} - Terra delle Rocce
+{B}sole  {/B} - Terra del Sole     {B}grande {/B} - Grande Terra     
+{B}giorni{/B} - Terra dei Giorni   {B}zanelia{/B} - Zanelia          

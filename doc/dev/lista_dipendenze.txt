@@ -1,0 +1,102 @@
+Inizio Elaborazione: ** Mon Oct 22 22:55:54 2007 **
+
+	ansi_clear	parse_color
+basedirname
+baseextname
+basefilename
+basename
+basenavdir
+driver
+driver_destroy
+driver_init
+max
+member_array
+min
+parse_color
+restore_string_deep
+std_msg	driver
+store_string_deep
+tell_object
+wipe_accent
+wipe_bs
+wipe_crlf
+include_file
+ztest
+
+	wrap_string	driver
+	client_to_user	driver
+	connections	driver
+	current_client	driver
+	current_user	driver
+	getdaemon	getdir
+	getdir	driver
+	getsetup	driver
+	number_to_string	driver
+
+	call_other	showexecerr	effective_file_name	find_object	current_user	log_file	write_debug	load_module	driver
+	call_out	current_user	driver
+	cat	tell_object	current_user	parse_std_msg	notify_fail	driver
+	cat_str	current_user	parse_std_msg	notify_fail	driver
+	cat_wrap	tell_object	current_user	parse_std_msg	notify_fail	clone_object	call_other	driver
+	dbuser_erase	getdir	store_config	restore_config	driver
+	dbuser_get	getdir	restore_config	driver
+	dbuser_set	getdir	store_config	restore_config	driver
+	do_command	call_other	getdir	write_debug	basedirname	getsetup	basefilename	wipe_accent	driver
+	driver_setup	getdir	log_file	getsetup	restore_config	driver
+	effective_file_name	current_user	write_debug	basedirname	basenavdir
+	find_living	current_user	driver
+	find_object	current_user	driver
+	find_user	driver
+	force	current_user	wipe_bs	do_command	write_debug	driver
+	getcolor	current_user	parse_color	driver
+	here	current_user	the_void
+	load_module	effective_file_name	current_user	parse_std_msg	include_file	unload_module	log_file	write_debug	basename	driver
+	log_file	current_user	getdir	time_to_str
+	move_object	call_other	effective_file_name	find_object	parse_std_msg	trans_object_out	trans_object_in	notify_fail	driver
+	myself	current_user
+	notify_fail	current_user	log_file	getcolor	driver
+	parse_alias	current_user	driver
+	parse_std_msg	parse_string	std_msg
+	parse_string	current_user	parse_color	std_msg	driver
+	process_logon	current_user	process_passw2	log_file	process_passw	process_username	write_parsed	std_msg	process_kickout	driver
+	process_normal	tell_object	current_user	parse_alias	log_file	force	write_debug	write_parsed	getsetup	std_msg	driver
+	process_startup	tell_object	current_user	log_file	write_debug	driver
+	quit_all_clients	quit_client	driver
+	quit_client	client_to_user	log_file	trans_object_out	driver
+	register_object	driver
+	remove_member_array	member_array
+	restore_config	log_file	restore_string
+	restore_string	restore_string_deep
+	roll_dice	getsetup
+	save_all_users	tell_object	getdir	std_msg	driver
+	save_user	getdir	log_file	driver
+	say	tell_object	current_user	log_file	remove_member_array
+	shout	tell_object	current_user	driver
+	showcomperr	write_snoopees	current_user	getdir	parse_std_msg	write_client	log_file	driver
+	showexecerr	write_snoopees	current_user	getdir	parse_std_msg	write_client	log_file	notify_fail	driver
+	store_config	store_string
+	store_string	store_string_deep
+	tell_room	tell_object	call_other	find_object	parse_std_msg	remove_member_array	notify_fail
+	the_void	find_object	getsetup
+	time_to_str	getsetup	driver
+	trans_object_in	driver
+	trans_object_out	basename	remove_member_array	driver
+	unload_module	driver
+	unregister_object	driver
+	wrap_array	current_user
+	wrap_parse	parse_string	wrap_string
+	wrap_string	current_user	wrap_string_user
+	wrap_string_user	current_user
+	write_client	write_other	current_client
+	write_debug	write_other	current_user	client_to_user	current_client
+	write_other	current_user	client_to_user	current_client
+	write_parsed	parse_string	write_client
+	write_snoopees	write_other	driver
+	antivirus_alert	log_file
+	create_object	showcomperr	antivirus_alert	getdir	log_file	basename	write_debug	basedirname	basefilename	driver
+	process_username	current_user	log_file	write_parsed	std_msg	driver
+	process_passw	process_enter	username_to_client	current_user	getdir	log_file	write_parsed	std_msg	driver
+	process_passw2	process_enter	current_user	getdir	store_config	log_file	driver
+	process_kickout	write_other	process_enter	username_to_client	current_user	getdir	parse_std_msg	current_client	quit_client	log_file	std_msg	driver
+	process_enter	call_other	current_user	getdir	current_client	parse_string	write_client	log_file	shout	getdaemon	cat	save_user	register_object	std_msg	move_object	driver
+

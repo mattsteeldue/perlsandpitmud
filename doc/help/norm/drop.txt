@@ -1,0 +1,3 @@
+Uso: drop <oggetto> [numero]
+Seleziona un'oggetto dal tuo "inventario" per lasciarlo nella stanza dove ti trovi ora. Quando hai più oggetti con lo stesso nome il comando si riferisce al primo disponibile, i successivi vanno identificati aggiungendo un numero progressivo.
+Vedi anche: examine, get, give

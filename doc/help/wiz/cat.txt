@@ -1,0 +1,2 @@
+Uso: cat <filename> [ inizio [num] ]
+Mostra il contenuto di un file o di una parte di esso. è possibile visualizzare solo <num> righe a partire da una certa riga <inizio>.

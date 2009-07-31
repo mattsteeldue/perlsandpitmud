@@ -1,0 +1,2 @@
+Uso: forcesnoop <commands...>
+Questo comando è legato al comando snoop. Una volta applicato il comando snoop verso un utente o un mob è possibile forzare il mob con questo comando di abbreviazione che equivale al comando 'force <mob> <commands...>' dove all'oggetto <mob> è stato applicato in precedenza il comando 'snoop <mob>'.

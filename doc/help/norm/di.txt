@@ -1,0 +1,3 @@
+Uso: di <nome> <messaggio>
+Comunica con un singolo giocatore mandandogli il <testo del messaggio>. Gli altri personaggi presenti nella medesima stanza, non vedono il testo del messaggio, solamente, se sono attenti, ti vedono bisbigliare qualcosa all'orecchio di qualcuno.
+Vedi anche: {B}com{/B}, {B}parla{/B}, {B}urla{/B}.

@@ -1,0 +1,5 @@
+#
+# dummy_prop.txt
+#
+0a = ([outdoor|forest])
+Aa = ([outdoor|forest])

@@ -1,0 +1,2 @@
+Uso: at <username> <command>
+Esegue <command> come se fossi nella stessa stanza di <username>

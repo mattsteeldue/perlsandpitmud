@@ -1,0 +1,4 @@
+Uso: ansi
+Consente di attivare o disattivare la presentazione dei colori "ANSI".
+Non tutti i terminali sono in grado di recepire e visualizzare correttamente tali codici.
+Vedi anche: {B}color{/B}.

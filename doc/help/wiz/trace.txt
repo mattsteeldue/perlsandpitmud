@@ -1,0 +1,11 @@
+Uso: trace [n]
+Imposta o visualizza il valore di "trace" per il debugger. I valori impostano i singoli bit del debugger
+   debugging: > trace n
+   1 *incremental details* showexecerr
+   2 include_file
+   4 load_module
+   8 process_normal process_startup
+  16 force do_command
+  32 call_other socket_process
+  64 effective_object_name
+ 128 Actions._look 

@@ -1,0 +1,15 @@
+Uso: {B}help <voce>{/B}  per avere una pagina di help su una certa <voce>
+
+ voci principali
+ ---------------
+ {B}com   {/B}    come comunicare con gli altri utenti.
+ {B}combat{/B}    come combattere.
+ {B}emote {/B}    uso delle "emotions" per aggiungere emozioni.
+ {B}mondo {/B}    comandi per il set-up nel Mondo Emerso.
+ {B}mov   {/B}    muoversi nel Mondo Emerso.
+ {B}obj   {/B}    interazione con gli oggetti del Mondo Emerso.
+ {B}shop  {/B}    comandi normalmente disponibili in uno "shop"
+ {B}razze {/B}    quali sono le razze.
+ {B}terre {/B}    inquadramento delle terre del Mondo Emerso.
+
+ '{B}help voci{/B}'      per avere la lista di tutte le voci di questo help

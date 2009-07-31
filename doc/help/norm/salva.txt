@@ -1,0 +1,5 @@
+Uso: salva
+Salva la configurazione dell'utente.
+Equivale al comando '{B}save{/B}'.
+Uscendo con '{B}quit{/B}' questo salvataggio avviene automaticamente.
+Periodicamente viene forzato un 'autosave' per tutti gli utenti.

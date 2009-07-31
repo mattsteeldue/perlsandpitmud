@@ -1,0 +1,171 @@
+Migliorie e verifiche:
+
+    PostOffice.pm   è completo? serve?
+    cmd/norm/_mail
+    
+    Living.pm   heart_beat per follow?
+
+
+Da ritoccare:
+wiz
+    stat
+    peace
+    restore
+    advance
+    disconnect
+    switch
+    freeze
+    silence
+    echo
+    at
+        
+Comandi da implementare:
+------------------------
+say (common or other toungue): tongue/speak to change tongue.
+echo, echoto, echoall
+goin  (va dentro l'item).
+DOOR: open, close, lock, search, pick (thief), unlock
+bomb: per distruggere tutto tranne i giocatori
+cls
+church: oppure terrazza.
+describe: per dare una descrizione di se stessi
+
+load (load into memory)
+main (tail muddrv.log)
+
+
+Comandi std sui quali rendere parametrici i messaggi.
+attack
+brief ?
+channel -> std/obj/channel_daemon
+color
+emote -> cmd/norm/emote
+
+
+----------
+sviluppare
+----------
+
+emotes.cfg
+    uso di $adverb
+    Tutte quelle del foglio Excel
+
+score command
+get all command
+workroom
+shop...
+attack ...
+dragon fly
+area.
+drop session
+map creator
+editor
+bulletin board
+
+
+comando stat (da zero) 
+comando stat, aggiungere altre caratteristiche
+
+Actions.pl : 
+    cmd_inventory (affinare la presentazione grafica)
+    cmd_actions (che razza di lista e')
+    cmd_hello (migliorare o eliminare)
+    cmd_users (migliorare la lista)
+    cmd_help (migliorare l'help)
+
+Muddrv.pm :
+    init() - spostare in MudCore ?
+
+help.txt
+
+    
+
+
+----------
+fatto
+----------
+note command (->annota)
+
+dinar get&drop
+    add_object parametrico
+        restart parametrico
+        uniqueness gestita a livello di singolo oggetto.
+
+canali chat
+
+ufficio postale
+
+comando teleport, migliorare le ubicazioni e i messaggi.
+
+do_command() 
+* che chiami quello che ho definito con add_action.
+* Deve chiamare correttamente le azioni della stanza.
+-> fatto, ma rivedere la priorita' delle varie fasi di azione.
+* Deve chiamare correttamente le azioni degli oggetti della stanza.
+
+Muddrv.pm :
+    socket_process() - alias parser.
+    init() - spostare in MudLib ?
+
+MudLib.pm :
+    process_startup() - migliorare la stanza di startup per il set-up del personaggio
+    CRACE   - razze
+
+Object -> deep_inventory()
+
+Actions.Look -> light +/-
+    cmd_look (potremmo aggiungere la mappa dall'alto)
+
+MudLib.pm :
+    include_file() - virtual grid room
+    include_file() - use XX -> our @ISA = qw(XX);
+
+quit_all_clients() 
+    if $this->time_to_halt > 0 && time() > $this->time_to_halt ;
+
+
+sub tell_object()
+    # if not player go to catch_tell
+
+comando show recursive ...
+
+Actions.pl : 
+cmd_examine (aggiungere descrizione oggetto esaminato)
+
+effective_object_name
+
+teleport
+
+move_object
+
+_snoop
+
+call_out:  fulfil pending callouts
+
+Room::restart()
+questione sulla clonazione selettiva
+
+std/Actions.pm
+Movimento, s/n/e/w.
+Se non c'e' l'uscita, dovrei ricevere un notify_fail diverso da What?.
+    # 0. Default verbs.
+    #if ( exists $this->actions->{ $cmd } && $this->actions->{ $cmd } ) { }
+-> ok
+
+cmd/wiz/_set.pm
+simile a config al volo.
+consentire di settare oggetti chiamati con xxx/yyy
+-> OK.
+
+
+config()
+store()
+Devono poter configurare anche i sottooggetti tramite .
+-> Fino a un livello funziona.
+
+init()
+done()
+-> richiedono un parametro in piu' che è l'oggetto "partner"
+
+
+mobile:   trail_delay...

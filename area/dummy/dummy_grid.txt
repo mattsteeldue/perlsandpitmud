@@ -1,0 +1,32 @@
+#
+# dummy_grid.txt
+#
+#------------------------#
+#     1 |     2 |     3 |#
+|0a0a0a0a0a0a0a0a0a0a0b0b|
+|0a0a0aAaAaAaAaAaAa0a0a0b|
+10a0aAaAaAaAaAaAaAaAa0a0b1
+_0aAaAaAaAaAaAaAaAaAaAa0b_
+#                        
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+20aAaAaAaAaAaAaAaAaAaAa0b2
+_0aAaAaAaAaAaAaAaAaAaAa0b_
+#                        
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+|0a0aAaAaAaAaAaAaAaAa0a0b|
+30a0a0aAaAaAaAaAaAa0a0a0b3
+_0a0a0a0a0a0a0a0a0a0a0a0b_
+#     1 |     2 |     3 |#
+#------------------------#
+#
+# The map "logical width" is given by the length of the first pay-row / 2 - 2.
+# The map "logical height" is given by the number of pay-rows.
+# In this example the environment is made up by a 12 x 12 grid.
+# Each "cell" is given by two characters which are coded in dummy_short and dummy_long
+# Codes beginning with "0" are "special", i.e. unaccessible: adjacent cells give
+# information saying "neighbour: west, sea".
+# Coordinate-x is horizontal, y is vertical.
+# The "ruler" numbers locate 4x4 squares in the paper-map I used during the conversion.
+# The first and the last column are not part of the map and can be used as a ruler also.
+# Wizards and Admins can use "reload" to reload all these file in runtime

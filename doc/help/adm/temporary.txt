@@ -1,0 +1,2 @@
+Uso: temporary
+Abilita o disabilita l'uso di file temporeanei

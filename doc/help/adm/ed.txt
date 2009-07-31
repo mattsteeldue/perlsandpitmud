@@ -1,0 +1,11 @@
+Uso: ed <filename>
+Entra in modalità editor.
+Se filename esiste, lo apre e lo mostra a pagine di dieci.
+I comandi disponibili sono 
+  h  help.                
+  q  quit senza salvare.
+  s  save e backup.    
+  l  list       1 l      
+  n  next page           
+  b  precedente
+  p  put line   9 p      

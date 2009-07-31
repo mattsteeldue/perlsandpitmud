@@ -1,0 +1,6 @@
+at          back        cat         clone       
+force       goto        grid        home        
+peace       reload      restart     show        
+stat        teleport    trace       unload      
+update      uptime      users       virtual     
+voci        wiznews     zap         

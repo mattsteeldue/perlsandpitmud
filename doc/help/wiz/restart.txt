@@ -1,0 +1,2 @@
+Uso: restart
+Richiama la function 'restart' della stanza dove ti trovi. Il restart avviene periodicamente ogni tot minuti, questo comando consente di anticiparlo. Di solito questo consente di azzerare la stanza e ripristinare gli oggetti come all'avvio. 

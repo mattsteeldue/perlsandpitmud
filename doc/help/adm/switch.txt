@@ -1,0 +1,4 @@
+Uso: switch <username>
+Consente di impersonare un certo <username>, purché tale utente non sia collegato.
+Per "ritornare" ad essere quello che eri, si usa il comando 'return'.
+Se <username> dovesse collegarsi improvvisamente, verresti automaticamente forzato a "ritornare" te stesso.

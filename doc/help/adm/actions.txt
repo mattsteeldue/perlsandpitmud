@@ -1,0 +1,2 @@
+Uso: actions
+Mostra l'elenco di tutti i comandi disponibili in questo momento. La lista risulta in ordine alfabetico, tutta impaccata.

@@ -1,0 +1,20 @@
+# This file contains a list of main towns within the grid.
+#
+Assa = ([Assa|55|80])
+Barahar = ([Barahar|44|27])
+Darea = ([Darea|11|47])
+Damilar = ([Damilar|94|36])
+Dessa = ([Faro di Dessa|50|4])
+Giafta = ([Porto di Giafta|41|17])
+Laia = ([Laia|36|31])
+Lamar = ([Lamar|66|33])
+Laodamea = ([Laodamea|31|51])
+Lome = ([Lome|63|25])
+Loos = ([Loos|40|50])
+Makrat = ([Makrat|91|44])
+Narbert = ([Narbert|71|77])
+Reptha = ([Reptha`|32|85])
+Salazar = ([Salazar|28|68])
+Seferdi = ([Seferdi|90|66])
+Selva = ([Selva|72|53])
+

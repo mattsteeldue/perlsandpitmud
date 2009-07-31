@@ -1,0 +1,9 @@
+Buonasera.
+Sto cercando di capire se, da parte mia, sia violazione del Vostro diritto d'autore la seguente idea.
+Partendo dall'ambientazione fantasy descritta nelle "Cronache del Mondo Emerso" di Licia Troisi che Voi pubblicate, è mio desiderio costruire un MUD ("Multi User Dungeon") cioè di "codificare" con un dato linguaggio di programmazione un MUD.
+Si tratterebbe di un'ambientazione di gioco di tipo "text-adventure", multi utente, che si svolge collegandosi via Internet ad un particolare indirizzo.
+Volendo fare un paragone, il "fan club" è quanto più assomiglia a questo tipo di iniziativa; cioè un "luogo virtuale" di incontro e di scambio di notizie e opinioni tra appassionati di un certo tema, nel quale sia inoltre possibile "inventare delle adventure" sullo stesso tema, ed è questa la parte che potrebbe essere fraintesa come "commerciale".
+Di fatto, in questa maniera "userei" il tema delle "Cronache" rischiando di violarne i diritti; d'altra parte la Mondadori ne ricaverebbe una enorme pubblicità gratuita, nello stesso modo con il quale vengono divulgati i titoli di Licia Troisi in qualunque "BLOG" o "NEWSGROUP"
+Preciso che questa iniziativa sarebbe di carattere amatoriale e gratuita.
+Vi ringrazio in anticipo.
+_ Matteo Vitturi _

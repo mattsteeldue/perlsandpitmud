@@ -1,0 +1,4 @@
+Uso: update update [room|messages|emotes|constants|actions]
+Senza argomenti aggiorna la stanza da dove viene invocato, ricaricando in memoria il file sorgente così come eventualmente modificato. Tutti gli oggetti, tutti i mostri e tutti i personaggi vengono "salvati" per un attimo nel "vuoto" e immediatemente ripristinati. 
+Se il file sorgente viene caricato correttamente, sembrerà che non sia accaduto nulla, altrimenti, tutti si ritroveranno a fissare il vuoto.
+Se viene specificato un parametro consente di aggiornare i messaggi, le emotes e le azioni rileggendo i rispettivi file di configurazione (messages.cfg, emotes.cfg, actions.cfg).

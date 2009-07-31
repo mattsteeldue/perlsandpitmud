@@ -1,0 +1,12 @@
+Per comunicare hai a disposizione i seguenti comandi, alcuni comandi sono disponibili in due lingue, italiano e inglese.
+
+- {B}di     {/B}- {B}tell {/B} - comunica con un singolo utente. 
+- {B}parla  {/B}- {B}say  {/B} - comunica con ogni personaggio della stanza. (')
+- {B}urla   {/B}- {B}shout{/B} - comunica con l'intero Mondo Emerso.
+- {B}channel{/B}  {B}     {/B} - comunica sui canali di chat interna.
+- {B}mail   {/B}  {B}     {/B} - accede alla casella di posta 
+- {B}annota {/B}  {B}     {/B} - consente di lasciare delle annotazioni.
+- {B}emote  {/B}  {B}     {/B} - manifesta atteggiamenti o emozioni.
+
+Un apostrofo ({B}'{/B}) all'inizio della linea, equivale a '{B}parla{/B}'. Oltre a comunicare verbalmente è disponibile una grande quantità di '{B}emote{/B}' cioè di atteggiamenti, espressioni del viso, rumori, etc. che consentono di interagire sotto numerosi punti di vista. Un punto-e-virgola ({B};{/B}) all'inizio della linea, equivale a '{B}emote{/B}'. 
+Vedi anche {B}help emote{/B}. 

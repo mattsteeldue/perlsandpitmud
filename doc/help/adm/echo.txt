@@ -1,0 +1,2 @@
+Uso: echo <text>
+Scrive <text> su tutti i terminali

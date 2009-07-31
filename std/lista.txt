@@ -1,0 +1,42 @@
+ Il volume nell'unit… C Š Sistema
+ Numero di serie del volume: E480-1D6A
+
+ Directory di c:\mud\Salazar\std
+
+23/10/2008  17.06    <DIR>          .
+23/10/2008  17.06    <DIR>          ..
+30/05/2008  21.36               591 Amulet.pm
+06/10/2008  18.01            16.122 Archive.pm
+25/05/2008  22.05               766 Armour.pm
+11/09/2008  23.10             1.638 BackShop.pm
+25/05/2008  22.05               587 Belt.pm
+22/08/2008  15.46             5.810 Book.pm
+25/05/2008  22.05               765 Boots.pm
+25/05/2008  22.05               765 Cloak.pm
+08/06/2008  14.25               631 Combat.pm
+23/10/2008  17.07    <DIR>          daemon
+16/09/2008  13.00             1.382 Daemon.pm
+25/05/2008  22.05               593 Earring.pm
+25/05/2008  22.07               584 Exit.pm
+25/05/2008  22.07             1.945 Garment.pm
+25/05/2008  22.07               768 Gloves.pm
+25/05/2008  22.07               768 Helmet.pm
+25/05/2008  22.07               581 Key.pm
+23/10/2008  17.17                 0 lista.txt
+23/09/2008  14.46            23.114 Living.pm
+22/08/2008  15.45             8.798 Mobile.pm
+28/07/2008  17.19    <DIR>          mon
+25/05/2008  22.07             1.866 Money.pm
+23/10/2008  17.07    <DIR>          obj
+12/10/2008  14.24            25.221 Object.pm
+25/05/2008  22.07               428 PostOffice.pm
+25/05/2008  22.07               587 Ring.pm
+16/10/2008  23.38    <DIR>          room
+11/09/2008  23.00            14.159 Room.pm
+25/05/2008  22.07               768 Shield.pm
+15/06/2008  14.36             9.152 Shop.pm
+18/10/2008  14.05            21.038 User.pm
+06/10/2008  18.03            15.428 VirtualRoom.pm
+05/08/2008  21.46             1.401 Weapon.pm
+              29 File        156.256 byte
+               6 Directory  11.583.926.272 byte disponibili

@@ -1,0 +1,18 @@
+
+                ** {B}Schema Rampe{/B} **
+         ** {B}arco sud{/B} **        ** {B}arco nord{/B} **
+       
+Attico  o      a      o             o  o  o     
+        \ o    |    o             o /   \   o   
+         \  o  o  o    )        o  /     \    o 
+Alti    o \   /    \  o           / o  o  o  /  
+          o  /      o /        (  o       \ o   
+          \ o  o  o  \          o /        /  o 
+Medi    o  /        / o          \  o  o  o \   
+          o \       o  )        / o      /  o   
+         /  o  o  o /           o  \    /   \ o 
+Bassi   o    \     /  o        (    o  o  o  \  
+          o   \   / o             o         o \ 
+            o  o  o             o             o 
+
+Le oblique indicano le rampe di collegamento tra i livelli.

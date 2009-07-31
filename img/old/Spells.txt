@@ -1,0 +1,29 @@
+i-3     Fuoco
+        Invisibilita' di cose o persone
+        Messaggio (pietrine con rune)
+        Guarigione
+i-2     Illusione
+ii-14   Difesa (barriera)
+        Formule imposte sulle armi o sulle truppe
+i-5     Fuoco freddo (test)
+i-9     Lampo accecante
+i-9     Lampo inceneritore
+        Falchetto ammaestrato
+i-16    Localizzazione (bacinella)
+ii-1    Campo di forza (azzurrino)
+ii-2    Passerella luminosa (per camminare sul mare)
+ii-2    Levitazione
+ii-2    Rimbalzo/specchio di un attacco nemico
+ii-3    Uragano (bomba sferica)
+ii-4    Localizzazione (raggio di luce)
+ii-4    Scudo (cupola di difesa)
+        Paralisi
+        Impermeabilizzazione pergamena
+        Sigillo anti-magia (no-spell)
+        Percezione di altri maghi (individuazione)
+        Pietrificazione
+        Fiamma nera (!)
+        Ombra inestinguibile 
+        Sogni
+        Volare
+        Teletrans

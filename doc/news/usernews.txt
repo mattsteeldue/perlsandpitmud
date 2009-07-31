@@ -1,0 +1,6 @@
+{RESET}
+{B}*News*{/B} help   - è disponibile il comando 'help' o 'aiuto'.
+{B}*News*{/B} chat   - è disponibile il comando 'channel' per le chat.
+{B}*News*{/B} mail   - Ufficio postale: direzioni s-b-w-w dalla terrazza.
+[ Il comando '{B}news{/B}' permette di rivedere queste news ]
+{RESET}

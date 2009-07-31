@@ -1,0 +1,16 @@
+ _____           ,                           _____                     
+(     )          ,`.      `,                (     ) Questo MUD e`     
+ | / |          `   :.   ,;;                 | / |  ambientato nella  
+ |/./|     `~~~,  :.;  (    `..              |/./|  Terra Del Vento   
+ | / |        . ::  :: ( ::: : ~             | / |  come descritta    
+ |/./|      ..::: ::::: ( ::: (o `.          |/./|  nella saga di     
+ | / |  ,~~' :::  :::::: ( ::::(::`~...,     | / |  Licia Troisi      
+ |/./|     .::    :: ::~~ : ::: :::  ^'(')   |/./|  Cronache del Mondo
+ | / |    : ::  (') ~ `  \~  ::: :           | / |  Emerso.           
+ |/./|  '  ;:` ('')        \.:: : ^(,        |/./|                    
+ | / |    |  ::`   ~         `~: ^   (       | / |  Ogni singolo quark
+ |/./|       :::` (  )         \. :^,        |/./|  di questo universo
+ | / |       :::::`   ~          ._,         | / |  e` stato scritto  
+ | . |        :::::` (  )                    | . |  utilizzando il    
+ | . |         :::::` :::                    | . |  linguaggio Perl.  
+(_____) ..::'' - Terra del Vento - ''::..   (_____)                   

@@ -1,0 +1,4 @@
+Uso: ls [-l] [{directory}]
+Mostra il contenuto della directory. Senza parametro mostra la il contenuto della directory corrente.
+Lo switch -l mostra i dettagli.
+Vedi anche {B}cd{/B}, {B}pwd{/B}.

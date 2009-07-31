@@ -1,0 +1,3 @@
+Uso: return
+Usato per "ritornare" ad essere quello che eri dopo aver dato lo 'switch <username>'.
+Se <username> dovesse collegarsi improvvisamente, verresti automaticamente forzato a "ritornare" te stesso.

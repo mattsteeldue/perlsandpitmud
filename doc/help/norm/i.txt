@@ -1,0 +1,3 @@
+Uso: inventory
+Mostra l'elenco degli oggetti che stai portando con te. Si può abbreviare in 'i'. 
+

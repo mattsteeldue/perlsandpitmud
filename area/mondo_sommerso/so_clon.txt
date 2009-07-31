@@ -1,0 +1,7 @@
+#
+# em_clon.txt
+# Clones per la griglia del Mondo emerso.
+
+# Al bordo della terra della notte, diamo qualche torcia.
+Fe = ([area/salazar/obj/torch])
+

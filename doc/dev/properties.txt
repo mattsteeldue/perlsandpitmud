@@ -1,0 +1,55 @@
+
+Object properties
+-----------------
+unique          an object/mon will be unique in the whole mud.
+permanent       an object will be re-cloned when you log on.
+cloned_unique   at restart object/mon wont be re-cloned if found.
+antigravity     a container will not transmit the weight of carried things.
+transparent     a container WILL transmit the light of carried things.
+opaque          a container will not transmit the light of carried things.
+dark            drains light.
+metal   
+
+Living properties
+-----------------
+HasCompass      has a compass to orientate in land.
+DarkView        is able to view in dark.
+
+
+
+Room Properties
+--------------- 
+#indoor          (_look, weather-off)
+outdoor         (_look, weather-on)
+weather         (weather-on)
+church          Chiesa
+postoffice      Postal Office room, enable "cmd/norm/_mail" command
+inn             at the brewery.
+guard           Corpo di guardia
+shop            Negozio
+drugstore       Droghiere
+library         Biblioteca
+infirmary       Infermeria
+magic           Magic
+#known_grid_...
+
+-- Affects subject temp
+mountain        montagna
+
+-- Affects subject humi
+desert          deserto
+volcano         vulcano
+forest          foresta  (_look)
+garden          giardino/orto
+sea             mare
+river           fiume
+lake            lago
+waterfall       cascata
+swamp           palude
+reef            scogliera
+island          isola
+--
+meadow          prato
+rock            roccia
+--
+

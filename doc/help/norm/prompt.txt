@@ -1,0 +1,2 @@
+Uso: prompt [testo]
+Definisce il testo da visualizzare come "prompt" all'inizio di ogni nuova riga, per indicare che il sistema è pronto per accettare un nuovo comando. Alla creazione del personaggio il prompt è la sequenza "[<username>] $".

@@ -1,0 +1,5 @@
+Uso: teleport <oggetto> <destinazione|here>
+Trasporta qualunque <oggetto> nella <destinazione> oppure nella stanza dove ti trovi se viene specificato 'here'. L'oggetto viene ricercato nel seguente ordine:
+1. fra tutti gli oggetti registrati, l'oggetto dev'essere identificato anche dal numero di sequenza.
+2. fra gli oggetti dell'inventario dell'utente chiamante.
+3. fra gli oggetti della stanza dell'utente chiamante.

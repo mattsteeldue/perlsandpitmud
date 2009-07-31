@@ -1,0 +1,2 @@
+Uso: shutdown <secondi>
+Arresta il MUD entro n secondi. Manda una comunicazione a tutto il Mondo Emerso. Questo comando non lascia scampo e perciò viene tracciato su un log.

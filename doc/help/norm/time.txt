@@ -1,0 +1,2 @@
+Uso: time
+Visualizza la data e l'ora del sistema.

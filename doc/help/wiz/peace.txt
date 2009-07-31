@@ -1,0 +1,3 @@
+Uso: peace
+Impone la pace immediata nella stanza dove ti trovi.
+

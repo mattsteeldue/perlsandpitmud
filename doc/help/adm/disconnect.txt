@@ -1,0 +1,2 @@
+Uso: disconnect <username>
+Disconnette l'utente indicato immediatamente e senza preavviso.

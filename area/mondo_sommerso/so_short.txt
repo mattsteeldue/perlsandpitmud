@@ -1,0 +1,9 @@
+#
+# so_short.txt
+# Descrizioni per la griglia del Mondo emerso.
+
+
+# Non accessibili
+
+Aa = Mare aperto
+Ba = Sott'acqua

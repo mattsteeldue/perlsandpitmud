@@ -1,0 +1,15 @@
+
+         ** {B}Piani medi{/B} **
+                             
+            A                
+              o o o          
+            o       o  G     
+           o         o       
+           o         o       
+           o         o       
+         F  o       o        
+              o o o          
+                    S        
+                             
+A : Armeria           S : Sarto      
+F : Fabbro            G : Gioielliere

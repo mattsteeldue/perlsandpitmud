@@ -1,0 +1,3 @@
+Le razze disponibili sono: Umani, Mezzelfi, Gnomi.
+(Prossimamente anche Folletti, Ninfe, Draghi, Sirenidi, Fammin).
+Puoi chiedere 'help <razza>' per una breve descrizione di ciascuna.

@@ -1,0 +1,3 @@
+# This file contains a list of main towns within the grid.
+#
+Castle = ([The Castle|6|5])

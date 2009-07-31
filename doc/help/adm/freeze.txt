@@ -1,0 +1,3 @@
+Uso: freeze <username>
+Blocca la funzionalità di un utente.
+Per sbloccarlo devi ridare freeze <username>.

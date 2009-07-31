@@ -1,0 +1,16 @@
+Una volta entrato, sei in grado  di interagire con il Mondo Emerso e con tutte le altre persone utilizzando i seguenti comandi; alcuni comandi sono disponibili in due lingue (per motivi storici), italiano e inglese:
+- {B}alias{/B}/{B}unalias{/B} - per creare "alias" di altri comandi
+- {B}ansi  {/B}   {B}    {/B} - per attivare/disattivare la colorazione del testo
+- {B}brief {/B}   {B}    {/B} - stabilisce il grado di dettaglio delle descrizioni
+- {B}color {/B}   {B}    {/B} - comando per personalizzare i colori
+- {B}fine  {/B} - {B}quit{/B} - per terminare il collegamento
+- {B}kal   {/B}   {B}    {/B} - per informazioni di calendario del Mondo Emerso
+- {B}guarda{/B} - {B}look{/B} - comando standard per guardare una stanza
+- {B}news  {/B}   {B}    {/B} - per vedere le "news"
+- {B}passwd{/B}   {B}    {/B} - cambia password
+- {B}prompt{/B}   {B}    {/B} - per cambiare il "prompt" di comando
+- {B}salva {/B} - {B}save{/B} - salva la configurazione del personaggio
+- {B}score {/B}   {B}    {/B} - score
+- {B}time  {/B}   {B}    {/B} - per conoscere l'ora del sistema "reale"
+- {B}users {/B}   {B}    {/B} - lista degli utenti collegati
+- {B}wrap  {/B}   {B}    {/B} - per regolare il numero di colonne visualizzate

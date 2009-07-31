@@ -1,0 +1,2 @@
+Uso: quit
+Chiude il collegamento, si usa per uscire dal Mondo Emerso.

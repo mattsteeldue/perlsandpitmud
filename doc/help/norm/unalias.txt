@@ -1,0 +1,3 @@
+Uso: unalias
+Serve per eliminare un 'alias' precedentemente definito con 'alias'.
+Insieme a 'alias' consente di definire dei nuovi comandi.

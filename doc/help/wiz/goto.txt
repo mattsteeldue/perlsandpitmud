@@ -1,0 +1,2 @@
+Uso: goto <where>
+Muove l'utente verso il luogo indicato. Il parametro <where> deve individuare un file completo di path.

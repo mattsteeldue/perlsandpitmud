@@ -1,0 +1,2 @@
+Uso: look
+Comando base per ottenere la descrizione dell'ambiente ove ti trovi. Si può abbreviare con "l".

@@ -1,0 +1,3 @@
+Uso: terrazza
+Chi ha appena iniziato a girare da queste parti (newbie) tendono a perdersi facilmente.
+Il comando '{B}terrazza{/B}' consente di essere teletrasportati sulla terrazza di Salazar (il luogo di inizio non appena si entra nel Mondo Emerso).

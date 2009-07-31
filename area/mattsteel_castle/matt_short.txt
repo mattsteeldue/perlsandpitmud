@@ -1,0 +1,11 @@
+#
+# valley_short.txt
+# Descrizioni per la griglia del Mondo emerso.
+
+
+0a = Forest.
+0b = Falde dei monti.
+0c = Torrente.
+
+Aa = Foresta.
+

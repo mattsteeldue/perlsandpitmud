@@ -1,0 +1,3 @@
+Uso: reload 
+Rilegge aggiornandole tutte le descrizioni della griglia virtuale nella quale viene richiamato. 
+Utilizzabile solo mentre ti trovi in una stanza della griglia virtuale.

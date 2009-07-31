@@ -1,0 +1,8 @@
+Per interagire con gli oggetti mobili hai a disposizione i seguenti comandi; alcuni comandi sono disponibili in due lingue, italiano e inglese.
+- {B}i      {/B} - {B}inventory{/B} - lista degli oggetti che stai portando.
+- {B}esamina{/B} - {B}examine  {/B} - per esaminare un oggetto disponibile
+- {B}lascia {/B} - {B}drop     {/B} - per lasciare un oggetto
+- {B}prendi {/B} - {B}get      {/B} - per prendere un oggetto
+- {B}dai    {/B} - {B}give     {/B} - per dare un oggetto a qualcuno
+- {B}party  {/B}   {B}         {/B} - per consentire a qualcuno di seguirci
+- {B}segui  {/B} - {B}follow   {/B} - per seguire un utente o un mob

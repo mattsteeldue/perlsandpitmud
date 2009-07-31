@@ -1,0 +1,13 @@
+Uso: color <elemento> <colore>
+è possibile scegliere il colore da usare per la visualizzazione delle varie parti delle descrizioni degli ambienti e degli oggetti, purché sia attiva l'opzione del comando {B}ansi{/B}
+Il parametro <elemento> può essere uno fra i seguenti:
+ {B}notify    {/B}: messaggio di notifica/errore
+ {B}short     {/B}: descrizione breve della stanza
+ {B}long      {/B}: descrizione lunga della stanza
+ {B}annotation{/B}: annotazioni lasciate dagli utenti
+ {B}weather   {/B}: avviso meteorologico
+Il <colore> può essere la parola '{B}default{/B}' per ripristinare il colore standard, oppure uno fra le seguenti parole:
+ {black}{ON_WHITE}black{RESET} {blue}blue {red}red {magenta}magenta {green}green {cyan}cyan {yellow}yellow {white}white 
+ {Black}Black {Blue}Blue {Red}Red {Magenta}Magenta {Green}Green {Cyan}Cyan {Yellow}Yellow {White}White.{RESET}
+Il colore espresso in lettera Maiuscola indica la tinta più forte (bold).
+Il comando {B}color{/B} da solo, restituisce l'attuale impostazione.

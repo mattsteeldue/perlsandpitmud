@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="goog-ws-page-title-header" class="goog-ws-page-title" style=""><span id="goog-ws-page-title">Benvenuto</span></h3>
+
+
+
+
+
+Nel
+giugno del 2002, ho iniziato ad usare Perl. In precedenza ho usato con
+profitto C e C++ perci&ograve; non ho avuto difficolt&agrave; ad entrare nella
+filosofia del linguaggio. Dopo poco pi&ugrave; di un anno, ero ormai
+positivamente impressionato dalla potenza di Perl e dalla ricchezza di
+librerie disponibili. <br>
+
+<br>
+
+Ad ottobre 2003 ho iniziato a pensare concretamente alla possibilit&agrave; di utilizzare il linguaggio Perl per sviluppare un <b><a href="http://it.wikipedia.org/wiki/Multi_user_dungeon" target="_blank" rel="nofollow">MUD</a></b>,
+nel tempo libero ovviamente. L'obiettivo fondamentale era di utilizzare
+Perl sia per sviluppare la parte "driver" (detta anche "engine"), sia
+la parte delle "librerie", facendo tesoro dell'esperienza maturata
+durante gli anni novanta utilizzando LPC quando bazzicavo nei MUD
+dell'epoca.<br>
+
+<br>
+
+Nel giro di un pochi giorni ho costruito un piccolo "driver" (che ho
+battezzato Muddrv) che accettava semplici connessioni telnet. Una volta
+stabilita la connessione fu possibile definire un nuovo utente e
+consentirgli di muoversi all'interno di un piccolo mondo virtuale
+formato da un paio stanze.<br>
+
+<br>
+
+In pochi mesi ho compreso che era necessario strutturare con molta
+attenzione il software, impiegando una metodologia "Object Oriented"
+(che va tanto di moda oggi) e suddividendolo in un certo numero di
+Oggetti-Package per&nbsp; formare una gerarchia consistente; il tutto
+avrebbe fatto affidamento su un insieme di funzioni di base, una
+"libreria" denominata MudCore.<br>
+
+<br>
+
+L'esigenza di salvare su disco la "foto istantanea" di un dato oggetto
+in modo da poterlo successivamente rileggere e ricostruire identico a
+prima mi ha costretto a sviluppare una modalit&agrave; di scrittura e lettura
+di tutte le componenti di un oggetto; ho realizzato di fatto una
+routine che salva tutti i valori dei membri di un oggetto,
+ricorsivamente, tenendo conto che in Perl abbiamo normalmente a che
+fare con scalari, hash e array; in modo speculare anche la routine di
+caricamento ricostruisce le strutture interne della classe. Per molto
+tempo questa tecnica &egrave; stata l'unica usata nel MUD nel senso che
+qualunque esigenza di "persistenza" dei dati &egrave; stata ridotta a questa
+sola modalit&agrave;.<br>
+
+<br>
+
+Solo recentemente, con l'uscita della versione Perl 5.010, ho iniziato
+ad utilizzare anche un database esterno per garantire la "persistenza"
+dei dati in modo da poterli accedere usando SQL; in particolare la
+scelta &egrave; caduta su <a href="http://www.sqlite.org/" target="_blank" rel="nofollow"><b>SQLite </b></a>la cui libreria &egrave; disponibile nella versione di Perl scaricabile da <a href="http://www.activestate.com/?hdr=1" target="_blank" rel="nofollow"><b>ActiveState </b></a>senza la necessit&agrave; di aggiungere delle patch.<br>
+
+<br>
+
+Ciascun comando disponibile per l'utente &egrave; stato ricondizionato ad un
+singolo Package, cio&egrave; un singolo file per ogni comando, attivabile
+attraverso l'interpretazione dell'input ricevuto da chi &egrave; collegato
+tramite il terminale. In questo senso Perl &egrave; particolarmente flessibile
+visto che permette di includere le parti di codice software solo nel
+momento in cui servono, ma anche di "scaricarli" dalla memoria e
+"ricaricarli" in memoria rispetto alle modifiche apportate ai singoli
+file sorgente senza necessit&agrave; di bloccare e riavviare il driver.<br>
+
+<br>
+
+Questa caratteristica pervade l'intero MUD: ogni oggetto, ogni arma,
+stanza, personaggio o mostro nemico viene posto in essere a partire da
+ciascun file sorgente; &egrave; possibile modificarlo al&nbsp; volo e forzare il
+driver a rileggerlo nuovamente per recepire immediatamente le
+modifiche. Se il nuovo file sorgente &egrave; corretto, bene, senn&ograve; succedono
+cose divertenti, come fluttuare improvvisamente nel vuoto o veder
+comparire inspiegabili crepe nel continuum spazio-temporale...<br>
+
+<br>
+
+L'attivit&agrave; di sviluppo si &egrave; fermata pi&ugrave; volte, per vari motivi, con
+pause lunghe talvolta anche di un anno intero. Ma ogni volta che ho
+ripreso, perch&eacute; le belle idee sono quelle che durano nel tempo e che
+danno soddisfazione.<br>
+
+<br>
+
+Per avere un'idea di come funziona realmente, all'indirizzo <a href="telnet:88.51.209.244">88.51.209.244</a> porta 23, c'&egrave; una istanza in versione Alpha di questo MUD.&nbsp;
+</body>
+</html>

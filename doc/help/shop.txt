@@ -1,0 +1,6 @@
+In uno "shop" normale sono disponibili alcuni comandi per interagire con il negoziante, per comprare, vendere o valutare un oggetto.
+- {B}lista {/B}  per vedere la lista degli articoli disponibili
+- {B}compra{/B}  per comprare un articolo in lista
+- {B}vendi {/B}  per vendere un articolo al prezzo di mercato
+- {B}valuta{/B}  per chiedere a quale prezzo riesci a rivendere
+Si tenga conto che i prezzi seguono il mercato: gli articoli molto richiesti hanno prezzi crescenti, viceversa articoli che "non vanno" hanno prezzi decrescenti.

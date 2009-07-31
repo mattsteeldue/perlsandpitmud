@@ -1,0 +1,4 @@
+Uso: set object.member[.submember] = <value>
+     set object.member[.submember]?
+Consente di modificare il valore di un qualunque membro o sottomembro appartenente ad un personaggio, mob o oggetto disponibile.
+Con la seconda sintassi viene visualizzato il valore senza modificarlo.

@@ -1,0 +1,38 @@
+#
+# valley_grid.txt
+# Mappa della Valley.
+#
+# Righe che iniziano con # vengono saltate.
+#
+#------------------------#
+#     1 |     2 |     3 |#
+|0a0a0a0a0a0a0a0a0a0a0b0b|
+|0a0a0aAaAaAaAaAaAa0a0a0b|
+10a0aAaAaAaAaAaAaAaAa0a0b1
+_0aAaAaAaAaAaAaAaAaAaAa0b_
+#                        
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+20aAaAaAaAaAaAaAaAaAaAa0b2
+_0aAaAaAaAaAaAaAaAaAaAa0b_
+#                        
+|0aAaAaAaAaAaAaAaAaAaAa0b|
+|0a0aAaAaAaAaAaAaAaAa0a0b|
+30a0a0aAaAaAaAaAaAa0a0a0b3
+_0a0a0a0a0a0a0a0a0a0a0a0b_
+#     1 |     2 |     3 |#
+#------------------------#
+#
+# La "larghezza logica" della mappa è data dalla lunghezza della prima riga utile / 2 -2.
+# L' "altezza" logica è espressa dal numero di righe utili.
+# In questo caso, l'ambiente è stato suddiviso in una griglia 12 x 12 (=144).
+# Ogni "cella" è formata da due bytes che vanno codificati nei file em_short e em_long .txt
+# I codici che iniziano con "0" sono "speciali", non accessibili: le celle adiacenti 
+# ne danno notizia dicendo p.es "nelle vicinanze: ovest, Mare"
+# La coordinata x è in orizontale, y in verticale. 
+# I numeri del "righello" individuano quadratini 4x4 della mappa cartacea che ho usato
+# durante la conversione da carta a file.
+# La prima colonna non fa parte della mappa e può essere usata come righello.
+# Anche l'ultima colonna non fa parte della mappa e può essere usata come righello.
+# I wizards usino "reload" per ricaricare in runtime tutti i file.
+#

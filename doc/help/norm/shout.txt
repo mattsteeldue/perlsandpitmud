@@ -1,0 +1,3 @@
+Uso: shout <testo del messaggio>
+Comunica con tutti i personaggi attualmente collegati! Va usato con intelligenza.
+

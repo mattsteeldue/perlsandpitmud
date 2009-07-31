@@ -1,0 +1,25 @@
+Elenco dei comandi disponibili per wizard.
+    actions
+    advance     who level
+    disconnect  who
+    dummy
+    echo        text  (migliorabile)
+    expel       who [message]
+    forcesnoop  verb
+    freeze      who
+    help
+    level       who level
+    reconfig    [who]
+    peace
+    permanent   obj
+    restore     [who]
+    set         aaa=[vvv]
+    show        ccc
+    shutdown    t
+    silence     who
+    snoop       who [why]
+    switch      who   (-> return)
+    temporary
+    try         perl
+    users       [band|all|logon]
+

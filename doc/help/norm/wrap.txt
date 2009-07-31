@@ -1,0 +1,3 @@
+Uso: wrap [n]
+Definisce il numero di colonne da usare per la formattazione del testo.
+Tipicamente {B}wrap 72{/B} offre una buona resa. Dato da solo visualizza l'attuale impostazione.

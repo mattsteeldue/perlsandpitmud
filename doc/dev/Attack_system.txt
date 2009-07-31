@@ -1,0 +1,25 @@
+
+Attack
+------
+
+1. Corpo a corpo
+
+1.1 Verifica per colpire.
+    match = to_hit( attacker->weapon_skill, defender->weapon_skill );
+
+1.2. Quantità di danno
+    foreach damage_dice { damage += roll_dice }
+    damage += attacker->strength - defender->resistance - defender->armour_class;
+  
+
+2. Da distante
+
+2.1. Verifica per colpire
+    match = attacker->ballistic_skill
+
+2.2. Quantità di danno
+    foreach damage_dice { damage += roll_dice }
+    damage += weapon_strength - defender->resistance - defender->armour_class;
+
+
+    

@@ -1,0 +1,3 @@
+Uso: tell <nome> <messaggio>
+Comunica con un singolo giocatore. Gli altri personaggi presenti nella medesima stanza, non vedono il testo del messaggio, solamente ti vedono bisbigliare qualcosa all'orecchio di qualcuno.
+Vedi anche: {B}com{/B}, {B}say{/B}, {B}shout{/B}.

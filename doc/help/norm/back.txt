@@ -1,0 +1,2 @@
+Uso: back
+Torna indietro nella stanza precendente, se possibile

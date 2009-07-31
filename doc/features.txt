@@ -1,0 +1,48 @@
+- Parte sistemistica -
+Ogni oggetto viene caricato in memoria la prima volta che viene referenziato.
+Room inutilizzate e vuote vengono scaricate dalla memoria.
+Uso di SQLite
+Sistema di riconoscimento di un bot sulla base della quantità di linee e caratteri input per unità di tempo
+Sistema di "ban" di determinati ip address o range di ip address.
+Possibilità di "snoop" da parte di Admin.
+
+- Parte interattiva -
+Sistema prezzi di mercato negli shop sulla base della domanda/offerta.
+Sistema di "grid-room" definite sulla base di file di configurazione.
+Sistema di "mail" interna al mud.
+Sistema di combattimimento usando un CombatObject.
+Sistema di canali chat interno.
+Sistema di tempo e clima sulla base di calendario e geografia.
+Sistema di "emote" con uso di espressioni del viso/corpo e di avverbi.
+
+Salve.
+Al raduno del 2 aprile u.s. via MSN si è concordato finalmente di usare il linguaggio Python.
+Ho anche presentato brevemente le caratteristiche dell'engine che ho scritto in Perl, con la speranza di poterne migrare alcune da Perl a Python.
+
+[b]Per inciso, ho scaricato Python 3 e ho visto che include le librerie di SQLite[/b] !
+
+In questo senso mi è stato chiesto di dare un elenco strutturato che scrivo di seguito:
+
+- Sistema prezzi di mercato negli shop sulla base della domanda/offerta: su questo tema ho già scritto un post (http://www.thekeeper.biz/input-programmazione-f7/sistema-di-prezzi-stock-exchange-t101.htm)
+
+- Sistema di "grid-room" definite sulla base di file di configurazione: si tratta di un sistema di room virtuali cioè non basate su oggetti programmati singolarmente ma su un unico "modello" che viene clonato e caratterizzato, date le coordinate X,Y,Z, in funzione dei dati di configurazione (scritti su file): questo consente di creare una grande quantità di stanze simili; stanze nodali effettivamente codificate prevalgono rispetto alla griglia e consentono di passare dalla griglia ai vari centri urbani e viceversa (spero di non avervi confuso).
+
+- Sistema di "mail" interna al mud (non ho previsto una mail verso l'esterno)
+
+- Sistema di combattimimento usando un unico CombatObject anziché l'evento heart-beat di ciascun combattente/avversario; questo consente di avere un controllo più fine dei tempi di combattimento. P.es 1 contro 1, rispetto a Tutti contro 1, rispetto a tutti contro tutti. E' il CombatObject che "ha il mazzo in mano".
+
+- Sistema di canali chat interni. 
+
+- Sistema di tempo e clima sulla base di calendario e geografia. In pratica gestisce in modo abbastanza grossolano il passaggio giorno-notte, la notifica della situazione meteo "personalizzata" in base a dove ti trovi usando le tre variabili pressione-temperatura-umidità (che variano casualmente) per decidere il tempo meterologico. Inoltre tengo conto di alcuni modificatori come la stagione, l'altitudine, la presenza di specchi d'acqua o foreste (definiti tramite property).
+
+- Sistema di "emote" con uso di espressioni del viso, parti del corpo e di avverbi: qui mi sono sbizzarrito: p.es. si può dare una "pacca" sulle "spalle" a "qualcuno" in modo "affettuoso", ecc. In pratica il comando è formato dal verbo, dall'oggetto destinatario (sia giocatore che mob), dall'eventuale parte del corpo destinataria e da un'eventuale avverbio che modifica il messaggio standard... il numero di combinazione è quindi elevatissimo.
+
+- Inoltre mi vorrei soffermare brevemente sulla parte sistemistica del Core.
+ . Ogni oggetto viene caricato in memoria la prima volta che viene referenziato.
+ . Room inutilizzate e vuote vengono scaricate dalla memoria.
+ . Uso di SQLite.
+ . Sistema di riconoscimento di un bot sulla base della quantità di linee e caratteri input per unità di tempo
+ . Sistema di "ban" di determinati ip address o range di ip address.
+ . Possibilità di "snoop" da parte di Admin.
+
+
