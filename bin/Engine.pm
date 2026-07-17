@@ -104,6 +104,7 @@ print( "SandpitMud v.$mudversion.\n" );
 print( "Written by Matteo Vitturi.\n" );
 
 use IO::Socket;
+use IO::Socket::SSL;
 use IO::Select;
 use Net::hostent;
 use Socket;
@@ -195,6 +196,8 @@ sub opcodes        { (@_)>1 ? ($_[0]->{OpCodes}            = $_[1],$_[0]) : $_[0
 sub constants      { (@_)>1 ? ($_[0]->{Constant}           = $_[1],$_[0]) : $_[0]->{Constant}          } 
 sub message        { (@_)>1 ? ($_[0]->{Message}            = $_[1],$_[0]) : $_[0]->{Message}           } 
 sub port           { (@_)>1 ? ($_[0]->{Port}               = $_[1],$_[0]) : $_[0]->{Port}              }
+sub sslcertfile    { (@_)>1 ? ($_[0]->{SSLCertFile}        = $_[1],$_[0]) : $_[0]->{SSLCertFile}       }
+sub sslkeyfile     { (@_)>1 ? ($_[0]->{SSLKeyFile}         = $_[1],$_[0]) : $_[0]->{SSLKeyFile}        }
 sub dir            { (@_)>1 ? ($_[0]->{Dir}                = $_[1],$_[0]) : $_[0]->{Dir}               }
 sub banned         { (@_)>1 ? ($_[0]->{BannedSiteAddress}  = $_[1],$_[0]) : $_[0]->{BannedSiteAddress} }
 sub connectstats   { (@_)>1 ? ($_[0]->{ConnectStats}       = $_[1],$_[0]) : $_[0]->{ConnectStats}      }  
@@ -341,7 +344,10 @@ sub new {
                ,'NotifyFail'   => 'What?'
                   } )
 
-         ->dbimasterfile( '/db/sqlite/world.sqlite' ) 
+         ->sslcertfile( 'cfg/server.crt' )
+         ->sslkeyfile ( 'cfg/server.key' )
+
+         ->dbimasterfile( '/db/sqlite/world.sqlite' )
          ->dbidriver  ( 'dbi:SQLite:dbname=$0' ) 
          ->dbiusername( '' ) 
          ->dbipasswd  ( '' ) 
@@ -385,15 +391,26 @@ sub new {
     # reads specific configuration file (actions, directions, emotes)
     $self->config();
 
-    # Activates listener at this port
+    # Activates listener at this port (TLS-encrypted; plaintext telnet is no longer served)
     my $port = $self->port || die "Missing 'Port' parameter in config file.\n";
-    my $lsn = IO::Socket::INET->new( 
-        Proto       => 'tcp',
-        LocalPort   => $port , 
-        Listen      => 10 , 
-        Reuse       => 1
+    my $certfile = clean_root( $self->sslcertfile );
+    my $keyfile  = clean_root( $self->sslkeyfile  );
+    die "SSL certificate '$certfile' not found. Generate one first (see plan/PLAN_MODERNIZATION.md).\n"
+        unless -f $certfile;
+    die "SSL private key '$keyfile' not found. Generate one first (see plan/PLAN_MODERNIZATION.md).\n"
+        unless -f $keyfile;
+    my $lsn = IO::Socket::SSL->new(
+        Proto             => 'tcp',
+        Family            => AF_INET , # match the old IO::Socket::INET (IPv4-only) binding
+        LocalPort         => $port ,
+        Listen            => 10 ,
+        Reuse             => 1 ,
+        SSL_server        => 1 ,
+        SSL_cert_file     => $certfile ,
+        SSL_key_file      => $keyfile ,
+        SSL_startHandshake => 0 , # defer handshake to socket_logon(), which does it blocking
          ) ;
-    die "Can't setup listener: $@" unless $lsn;
+    die "Can't setup listener: " . IO::Socket::SSL::errstr() unless $lsn;
     $lsn->blocking( 0 ); # superflous?
     
     # Setup selector
@@ -742,7 +759,21 @@ sub socket_logon {
     my $clientname = '<unknown>';
     my $clientaddr = '<unknown>';
 
-    my $new = $this->listner->accept;  #IO::Socket::INET
+    my $new = $this->listner->accept;  #IO::Socket::SSL, TLS handshake not yet done (SSL_startHandshake => 0)
+
+    unless ( $new ) {
+        log_file( 'engine.log', "Rejected connection: TCP accept failed." );
+        return 0;
+    }
+
+    # complete the TLS handshake now. accept_SSL() internally polls the socket
+    # non-blocking via select() up to Timeout seconds, so a slow/hostile client
+    # can only cost a few seconds, never hang the single-threaded engine.
+    unless ( $new->accept_SSL( Timeout => 5 ) ) {
+        log_file( 'engine.log', "Rejected connection: TLS handshake failed or timed out: " . IO::Socket::SSL::errstr() );
+        $new->close( SSL_no_shutdown => 1 );
+        return 0;
+    }
 
     my $hostinfo = eval { gethostbyaddr($new->peeraddr,0) } ;
     $clientname = eval { $hostinfo->name } || 'unknown';
@@ -883,7 +914,7 @@ sub socket_process {
         my @trg = @{ $this->{ReactionTrigger} };
         for( my $k = 0; $k < @trg; $k++ ) {
             my $match = $trg[$k];
-            if ( $msg =~ m/$match/ ) { # es: USER-fadmÿð
+            if ( $msg =~ m/$match/ ) { # es: USER-fadmï¿½ï¿½
                 log_file( 'banned.log', "Trigger $& reaction $this->{ReactionFilename}->[$k]." );
                 cat( getdir('dirdocsys') . $this->{ReactionFilename}->[$k] ) ;
                 $pl->status('Quit');

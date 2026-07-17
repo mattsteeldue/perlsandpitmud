@@ -1,3 +1,18 @@
+# .pm compiled from .pl originals 
+std/*/*.pm
+area/*/*/*.pm
+
+# runtime .log
+log/*.log
+
+# daily database images
+db/sqlite/*_20??????.sqlite
+
+# plan files
+# plan/*.md
+# @plan/ 
+
+
 !Build/
 .last_cover_stats
 /META.yml
@@ -37,5 +52,9 @@ inc/
 # Carton/Carmel
 /local/
 /.carmel/
+
+# TLS listener cert/key (self-signed, generated per-deployment)
+/cfg/server.crt
+/cfg/server.key
 # cpanfile.snapshot should generally be ignored for library code, otherwise included
 # cpanfile.snapshot
