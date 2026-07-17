@@ -72,7 +72,7 @@ sub do_export {
     my $tab = $1 if $what =~ /export\s+(.*)/;
 
     # ask describe
-    my $sth = $dbh->table_info( '','',$tab );
+    my $sth = $dbh->table_info( undef,undef,$tab );
     if ( $dbh->err || ! $sth->fetch() ) {
         write_client "Not found.\n";
         return 0;
@@ -117,7 +117,7 @@ sub do_import {
     my $tab = $1 if $what =~ /import\s+(.*)/;
 
     # select rows    
-    my $sth = $dbh->table_info( '','',$tab );
+    my $sth = $dbh->table_info( undef,undef,$tab );
     if ( $dbh->err || ! $sth->fetch() ) {
         print "Destination not present";
         return;

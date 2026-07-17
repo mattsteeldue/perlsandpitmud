@@ -46,7 +46,7 @@ sub new {
     $self->desc('This daemon handles supply & demand.');
     
     my $dbh = dbi();
-    my $sth = $dbh->table_info( '', '', 'engine_stock_exchange' );
+    my $sth = $dbh->table_info( undef, undef, 'engine_stock_exchange' );
     if ( ! $dbh->err && ! $sth->fetch() ) {
         $dbh->do( qq[ 
             create table engine_stock_exchange (

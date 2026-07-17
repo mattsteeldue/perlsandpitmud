@@ -20,7 +20,7 @@ sub new {
 # ---------------------------------------------------------------------
 sub preload {
     my $dbh = dbi();
-    my $sth = $dbh->table_info( '', '', 'engine_standard_level' );
+    my $sth = $dbh->table_info( undef, undef, 'engine_standard_level' );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[ 
             create table engine_standard_level (

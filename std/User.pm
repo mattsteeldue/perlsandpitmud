@@ -264,7 +264,7 @@ sub store {
     $this->SUPER::store($file);
 
     my $dbh = dbi();
-    my $sth = $dbh->table_info( '','','engine_user_info' );
+    my $sth = $dbh->table_info( undef,undef,'engine_user_info' );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create table engine_user_info (

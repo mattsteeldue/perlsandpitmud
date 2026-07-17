@@ -83,6 +83,7 @@ Multi-language setups live under `cfg/setup_en/` and `cfg/setup_it/`.
 - Lib paths `std/` and `bin/` are both in `@INC` (set in `driver.pl`).
 - Area `.pl` files are dynamically loaded at runtime — not `require`d at startup.
 - The `keyname` of an object is its filename plus a unique clone number (the object registry key in `Engine`).
+- **Source files are Latin-1 (ISO-8859-1) encoded, not UTF-8.** Many `.pm`/`.pl` files contain raw accented characters (Italian text, e.g. `bin/Commons.pm`'s `wipe_accent`, area/message files). When editing these files, preserve the existing byte encoding — do not let tooling re-save them as UTF-8, or accented characters will be silently corrupted. When in doubt, prefer a byte-level/raw substitution over a full read-modify-write of the whole file.
 
 ## Live Scripting / Runtime World Editing
 

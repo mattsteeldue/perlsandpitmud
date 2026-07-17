@@ -99,7 +99,7 @@ sub setup_database {
     #$dbh->func( 'now', 0, sub { return time() }, 'create_function' );
     #$dbh->func( 'sql_version', 0, sub { return $dbh->{sqlite_version} }, 'create_function' );
 
-    $sth = $dbh->table_info( '','','parm' );
+    $sth = $dbh->table_info( undef,undef,'parm' );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create view parm as
@@ -107,7 +107,7 @@ sub setup_database {
                  , datetime('now') curdatetime
                     ] ) ;
     }
-    $sth = $dbh->table_info( '','','dict' );
+    $sth = $dbh->table_info( undef,undef,'dict' );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create view dict as
@@ -117,7 +117,7 @@ sub setup_database {
                and name not in ('dict','cat','parm')
                     ]) ;
     }
-    $sth = $dbh->table_info( '','','cat' );
+    $sth = $dbh->table_info( undef,undef,'cat' );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create view cat as
@@ -126,7 +126,7 @@ sub setup_database {
     }
 
     # verifies that table exists, otherwise create table
-    $sth = $dbh->table_info( '','',"engine_password" );
+    $sth = $dbh->table_info( undef,undef,"engine_password" );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create table engine_password (
@@ -136,7 +136,7 @@ sub setup_database {
                     ] );
     }
     # verifies that table exists, otherwise create table
-    $sth = $dbh->table_info( '','',"${world_name}_password" );
+    $sth = $dbh->table_info( undef,undef,"${world_name}_password" );
     if ( $dbh->err || ! $sth->fetch() ) {
         $dbh->do( qq[
             create table ${world_name}_password (

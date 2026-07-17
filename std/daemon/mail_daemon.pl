@@ -13,7 +13,7 @@ sub new {
     bless $self, $class ;
 
     my $dbh = dbi();
-    my $sth = $dbh->table_info( '', '', 'engine_mailbox' );
+    my $sth = $dbh->table_info( undef, undef, 'engine_mailbox' );
     if ( ! $dbh->err && ! $sth->fetch() ) {
         $dbh->do( qq[ 
             create table engine_mailbox (

@@ -20,7 +20,7 @@ sub new {
     bless $self, $class ;
 
     my $dbh = dbi();
-    my $sth = $dbh->table_info( '', '', 'engine_channel_subscriber' );
+    my $sth = $dbh->table_info( undef, undef, 'engine_channel_subscriber' );
     if ( ! $dbh->err && ! $sth->fetch() ) {
         $dbh->do( qq[ 
             create table engine_channel_subscriber (
@@ -38,7 +38,7 @@ sub new {
         ##$sth->finish();
         # end migration
     }
-    $sth = $dbh->table_info( '', '', 'engine_channel_buffer' );
+    $sth = $dbh->table_info( undef, undef, 'engine_channel_buffer' );
     if ( ! $dbh->err && ! $sth->fetch() ) {
         $dbh->do( qq[ 
             create table engine_channel_buffer (

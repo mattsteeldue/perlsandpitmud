@@ -2386,7 +2386,7 @@ sub alert_admin {
     my $pl      = current_user();
     # alert admins if current user is not.
     my @admin = getsetup('Administrators') ;
-    if ( -1 == pos_array( @admin, $pl->name ) ) {
+    if ( !ref($pl) || !$pl->isa('Living') || -1 == pos_array( @admin, $pl->name ) ) {
         foreach $adm (@admin) {
             my $user = find_user($adm);
             next unless ref($user) && $user->isa('User');
