@@ -30,10 +30,10 @@ use strict; # qw(subs vars refs);
 #use warnings;
 ##use diagnostics;
 
-use Commons qw( log_file restore_config basedepth driver );
+use Commons qw( log_file restore_config basedepth basefilename driver );
 
 # ---------------------------------------------------------------------
-sub lockfile       { 'lock.txt' }
+sub lockfile       { basefilename($_[0]->{ConfigFile}) . ".lock.txt" }
 sub constants      { {} }
 sub dir            { $_[0]->{Dir} }
 
@@ -52,6 +52,7 @@ sub new {
     foreach my $key (keys %$temp) {
         $self->{$key} = $temp->{$key} if $key =~ /^Monitor/ or $key =~ /^Dir/;
     }
+    $self->{ConfigFile} = $configfile;
     log_file( 'muddrv.log',  "Start ($$)." );
     return $self;
 }

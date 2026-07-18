@@ -1,6 +1,6 @@
-:
-: mud.bat
-:
+#
+# mud.bat
+#
 
 cd bin
-mud.bat %1 %2 %3
+./mud.sh %1 %2 %3
