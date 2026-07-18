@@ -20,12 +20,10 @@ sub new {
          
          ->set_stats(10)  
          
-         ->add_reply( 'hello','Guard says "Hello"' ) 
-         ->add_chat( 'Guard says : "I\'m hungry."', 12,13 );  
-         
+         ->add_reply( 'hello','Guard says "Hello"' )
+         ->add_chat( 'Guard says : "I\'m hungry."', 12,13 )
          ->following( 'ronda_leader' );
-         ;
-         
+
     return $self;
 }
 

@@ -1,5 +1,12 @@
+# gitignore for the project 
+
+# runtime lock
+*.lock.txt
+
 # .pm compiled from .pl originals 
 std/*/*.pm
+cmd/*/*.pm
+area/*/*.pm
 area/*/*/*.pm
 
 # runtime .log
@@ -7,6 +14,13 @@ log/*.log
 
 # daily database images
 db/sqlite/*_20??????.sqlite
+db/sqlite/*.sqlite-journal
+db/sqlite/world.sqlite
+db/sqlite/terradelvento.sqlite
+
+
+# world user-specific configuration
+cfg/*/*.cfg
 
 # plan files
 # plan/*.md

@@ -23,7 +23,13 @@ perl bin/driver.pl cfg/world.cfg
 
 For the IDE/debug configuration use `cfg/terradelvento_ide.cfg` as the config argument.
 
-Connect via any telnet client to `localhost:23` (port configured in `cfg/world.cfg`).
+The listener speaks **TLS**, not plaintext telnet (see Modernization Plan below) — a plain telnet client will not work. Connect with:
+
+```
+openssl s_client -connect 127.0.0.1:7777
+```
+
+(port configured via `Port` in `cfg/world.cfg`, currently `7777`). Requires `cfg/server.crt`/`cfg/server.key` to exist (`SSLCertFile`/`SSLKeyFile` in `cfg/world.cfg`) — the engine refuses to start without them.
 
 ## Architecture
 
@@ -69,10 +75,11 @@ Room files call `add_exit('direction', 'relative/path')` and `add_object(...)` i
 ### Configuration (`cfg/`)
 
 `cfg/world.cfg` is the main config. Key parameters:
-- `Port` — telnet port (default 23)
+- `Port` — TLS listener port (currently `7777`)
+- `SSLCertFile` / `SSLKeyFile` — TLS cert/key (`cfg/server.crt` / `cfg/server.key`); engine refuses to start if missing
 - `StartupRoom`, `InitialRoom`, `TheVoidRoom`, `DaemonRoom` — special rooms
 - `DbiDriver` / `DbiMasterFile` — database (SQLite default at `db/sqlite/world.sqlite`)
-- `UseTempMode = 2` — temp files written alongside originals as `.pm`
+- `UseTempMode = 2` — temp files written alongside originals as `.pm`, purely so a step debugger (originally OpenIDE, ~2009) has something to attach breakpoints to, since it couldn't debug `.pl` directly; the `.pl` is always the real source, the `.pm` is regenerated on every load and gitignored
 
 Multi-language setups live under `cfg/setup_en/` and `cfg/setup_it/`.
 
@@ -102,13 +109,12 @@ The wizard (admin) can create, modify, and reload world content **without restar
 
 ## Modernization Plan
 
-Planning is underway to (1) replace plaintext telnet with an encrypted transport and (2) evaluate a full Perl→Python rewrite. **No implementation has started — this is planning-only, decisions deferred.**
+Planning covers (1) replacing plaintext telnet with an encrypted transport and (2) evaluating a full Perl→Python rewrite.
 
-Full plan lives in [`plan/PLAN_MODERNIZATION.md`](plan/PLAN_MODERNIZATION.md) and the detailed breakdown in [`@plan/`](@plan/) (`00_overview.md`, `01_option_tls_perl.md`, `02_option_python_rewrite.md`).
+**Option 1 — TLS on Perl: implemented.** `bin/Engine.pm` listens with `IO::Socket::SSL` (self-signed cert at `cfg/server.crt`/`cfg/server.key`, deferred handshake via `SSL_startHandshake => 0` completed blocking in `socket_logon()`). Complete break with plaintext telnet — no dual-protocol transition period, connect with `openssl s_client -connect 127.0.0.1:7777` (see "Running the MUD" above). Interactive user/password login and ANSI output are unchanged.
 
-Summary:
+**Option 2 — Full Python rewrite: not started, decision deferred.** Would reimplement the engine on `asyncio`, port the `std/` object hierarchy, and re-express the live-reload/eval mechanism above using `importlib` instead of Perl `eval` (same wizard-facing workflow: edit file → `clone`/`update` → live reload). SQLite persistence would stay. Estimated 8-10 wks with 2 people, ~16-20 wks solo.
 
-- **Option 1 — TLS on Perl** (1-2 wks, low risk): add `IO::Socket::SSL` to `Engine.pm`'s listener, self-signed cert, keep the interactive user/password login and ANSI output exactly as-is. Complete break with plaintext telnet (no dual-protocol transition period — there is no live playerbase to migrate).
-- **Option 2 — Full Python rewrite** (8-10 wks with 2 people, ~16-20 wks solo): reimplement engine on `asyncio`, port the `std/` object hierarchy, and re-express the live-reload/eval mechanism above using `importlib` instead of Perl `eval` (same wizard-facing workflow: edit file → `clone`/`update` → live reload). SQLite persistence stays.
-- Constraints established in discussion: single wizard/admin (no other scripters to retrain), no market/playerbase to preserve, so **no backward compatibility requirement** — a clean break is acceptable for both the transport and the language choice.
-- Recommended path if resources are uncertain: ship Option 1 first (fast, low-risk encryption), defer the Python decision.
+Full plan lives in [`plan/PLAN_MODERNIZATION.md`](plan/PLAN_MODERNIZATION.md) and the detailed breakdown in [`@plan/`](@plan/) (`00_overview.md`, `01_option_tls_perl.md`, `02_option_python_rewrite.md`) — treat those as the original planning record; this section reflects current implementation status.
+
+Constraints established in discussion: single wizard/admin (no other scripters to retrain), no market/playerbase to preserve, so **no backward compatibility requirement** — a clean break was acceptable for both the transport and the language choice.
