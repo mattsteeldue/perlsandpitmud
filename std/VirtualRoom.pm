@@ -37,7 +37,7 @@ use strict;
 
 ##use diagnostics;
 use Commons;
-use Room
+use Room;
 
 our @ISA = qw(Room);
 

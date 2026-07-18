@@ -5,6 +5,8 @@
 # since this file is located under ./bin go up one level
 cd ..
 
+mkdir -p log
+
 while [ 1 == 1 ]
   do
   # starts driver using the following configuration file.

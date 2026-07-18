@@ -383,10 +383,12 @@ sub new {
     
     # open aux CSV database if any
     my $dbicsv = $self->{DbiCSVDriver};
-    $dbicsv =~ s/\\t/\t/;
-    $dbicsv =~ s/\\n/\n/;
-    my $csv = DBI->connect( $dbicsv, '','' );
-    csv( $csv ) if $csv;
+    if ( $dbicsv ) {
+        $dbicsv =~ s/\\t/\t/;
+        $dbicsv =~ s/\\n/\n/;
+        my $csv = DBI->connect( $dbicsv, '','' );
+        csv( $csv ) if $csv;
+    }
 
     # reads specific configuration file (actions, directions, emotes)
     $self->config();
@@ -847,7 +849,7 @@ sub socket_logon {
         return 0;
     }
     
-    my $ch; # chunk of input stacked to input_buffer
+    my $ch = ''; # chunk of input stacked to input_buffer
     my $num; # length of chunk read
     $num = sysread $new, $ch, $this->bytes_per_poll ;
     log_file( 'preinputdata.log',"$ch" );
